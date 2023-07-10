@@ -157,13 +157,13 @@ const Posts = ({ isAuth, handleShowPosts }) => {
                         {post.author.name}
                       </span>
 
-                      {post.author.name && (
+                      {post.contact && (
                         <span
                           className="badge rounded-pill bg-info text-dark"
-                          onClick={() => handleSelect(post.author.name)}
+                          onClick={() => handleSelect(post.contact)}
                           style={{ cursor: "pointer" }}
                         >
-                          {post.author.name}
+                          {post.contact}
                         </span>
                       )}
                     </div>

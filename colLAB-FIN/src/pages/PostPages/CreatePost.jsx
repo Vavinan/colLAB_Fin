@@ -8,7 +8,7 @@ const CreatePost = ( {onPostSuccess}) => {
   const [title,setTitle] = useState("");
   const[postContent,setPostContent]=useState("");
   const[skills,setSkills]=useState("");
-  const[contact,setContact]=useState("");
+  //const[contact,setContact]=useState("");
 
   const navigate=useNavigate();
    useEffect(()=>{
@@ -28,7 +28,7 @@ const CreatePost = ( {onPostSuccess}) => {
             title:title,
             postContent: postContent,
             skills:skills,
-            contact:contact,
+            contact:auth.currentUser.displayName,
             author :{
               name:auth.currentUser.displayName,
               id:auth.currentUser.uid,
@@ -61,8 +61,9 @@ const CreatePost = ( {onPostSuccess}) => {
         <div  className="mb-3">
         <label htmlFor="tags" className="form-label"  > Skills required</label>
           <textarea placeholder='Skills' className='form-control' onChange={(e)=>setSkills(e.target.value)}></textarea>
-        <label htmlFor="contact" className="form-label"  >Chat User Name </label>
-        <input type="text" placeholder='Contact' className='form-control' onChange={(e)=>setContact(e.target.value)} />
+        {/*<label htmlFor="contact" className="form-label"  >Chat User Name </label>
+        <input type="text" placeholder='Contact' className='form-control' onChange={(e)=>setContact(e.target.value)} /> */}
+
         </div>
         <button className="btn btn-dark" onClick={submitPost} >POST</button>
       </div>
