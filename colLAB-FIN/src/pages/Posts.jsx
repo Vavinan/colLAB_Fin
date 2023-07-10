@@ -160,10 +160,10 @@ const Posts = ({ isAuth, handleShowPosts }) => {
                       {post.author.name && (
                         <span
                           className="badge rounded-pill bg-info text-dark"
-                          onClick={() => handleSelect(post.author.name)}
+                          onClick={() => handleSelect(post.contact)}
                           style={{ cursor: "pointer" }}
                         >
-                          {post.author.name}
+                          {post.contact}
                         </span>
                       )}
                     </div>
@@ -179,24 +179,6 @@ const Posts = ({ isAuth, handleShowPosts }) => {
 };
 
 export default Posts;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*import React from 'react'
 import { useEffect,useState } from 'react';
@@ -329,7 +311,6 @@ const Home = ({isAuth}) => {
 
 */
 
-
 /*return (
   <div className="homepage">
    {postLists.length ===0 ? <h3> No posts</h3> : postLists.map((post)=>{
@@ -340,8 +321,8 @@ const Home = ({isAuth}) => {
  {/*        {isAuth && post.author.id ===auth.currentUser.uid &&     
         <div className="d-flex justify-content-end">
          <button className="btn btn-danger my-3 mx-3" onClick={()=>{deletePost(post.id)}}> X </button>
-       </div> } *///}    {isAuth && auth.currentUser && post.author.id === auth.currentUser.uid && (    
-      /*  <div className="d-flex justify-content-end">
+       </div> } */ //}    {isAuth && auth.currentUser && post.author.id === auth.currentUser.uid && (
+/*  <div className="d-flex justify-content-end">
          <button className="btn btn-danger my-3 mx-3" onClick={()=>{deletePost(post.id)}}> X </button>
        </div>) }
         <h5 className="card-title mb-3 fw-bold">{post.title} </h5>
