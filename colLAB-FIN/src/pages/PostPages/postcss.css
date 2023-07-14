@@ -1,6 +1,88 @@
+.createPost-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  background-color: rgba(255,255,255,0.7);
+  vertical-align: middle;
+  border-radius: 30px;
+  
+
+  .postForm {
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
 
 
-body {
+    .createPost-heading {
+      color: rgb(7, 94, 84);
+      font-family: Roboto, Arial;
+      font-weight: bold;
+      font-size: 50px;
+      text-decoration: underline;
+      text-align: center;
+      margin-bottom:40px;
+      margin-top:30px;
+    
+    }
+
+  .createPost-split-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    
+      .split-container {
+        display: flex;
+        flex-direction: column;
+
+
+      .form-control {
+       background-color: rgba(7, 94, 84, 0.3);
+        width:400px;
+        color: black;
+  
+      }
+
+      .form-control::placeholder {
+        color:white;
+      
+      }
+
+      .form-label {
+        font-size:22px
+
+      }
+
+    }
+  }
+
+  .publish-button {
+    font-family: Roboto, Arial;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    width:250px;
+    height:60px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: rgb(7, 94, 84);
+    color: white;
+
+  }
+
+}
+
+
+
+
+
+
+
+/* body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -12,15 +94,14 @@ body {
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
-  }
- /* .search-bar {
+  } */
+/* .search-bar {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
   }*/
-  
-  .search-input {
-    padding: 10px;
+
+/* .search-input {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -29,7 +110,6 @@ body {
   }
   
   .search-button {
-    padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
     color: #fff;
@@ -106,7 +186,8 @@ body {
   .text-dark {
     color: #343a40 !important;
   }
-.createPost {
+
+  .createPost {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,7 +282,4 @@ body {
   background-color: #fff;
   z-index: 1;
   margin-bottom: 20px; 
-}
-
-
-
+} */

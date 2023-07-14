@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
-import Sidebar from '../components/Sidebar';
+import React, { useState , useContext} from 'react';
+import Sidebar from '../components/sidebar';
 import Chat from '../components/Chat';
 import Posts from './Posts';
 import CreatePost from './PostPages/CreatePost';
 import Bio from './PostPages/Bio';
+import Navbar from '../components/Navbar';
+import { auth } from '../firebase';
+import { AuthContext } from '../context/AuthContext';
+
 
 export const Home = () => {
   const [showPosts, setShowPosts] = useState(true);
@@ -36,8 +40,59 @@ export const Home = () => {
     setShowBio(false);
   };
 
+  const handleSignOut = () => {
+    auth
+      .signOut()
+      .then(() => {
+        // Handle sign out success
+      })
+      .catch((error) => {
+        // Handle sign out error
+        console.log(error);
+      });
+  };
+
+  const { currentUser } = useContext(AuthContext);
+
+  
+
+
+
+
+
   return (
     <div className="home">
+      <div className="top-navigation-bar">
+        <div className='left-top-navigation-bar'>
+            <img className="collab-logo" src="src/images/ColLAB__1_-removebg-preview.png"></img>  
+          <div className='greeting-text'>Hello, {currentUser.displayName}!</div>      
+        </div>
+        
+        <div className="center-top-navigation-bar">
+
+         <button className= "navigation-bar-button" onClick={handleShowPosts}>
+          {isPostsPage ? 'Chats' : 'Home'}
+        </button>
+  
+        {isPostsPage && (
+          <button className= "navigation-bar-button" onClick={handleCreatePost}>
+            {showCreate ? 'Home' : 'Create Post'}
+          </button>
+        )}
+
+        {isPostsPage && !showCreate && (
+            <button className="navigation-bar-button" onClick={handleShowBio}>
+              Profile
+            </button>
+          )}
+
+        </div>
+
+          <button className='logout-button' onClick={handleSignOut}>Logout</button>
+        
+      </div>
+    
+      
       <div className="container">
         {!showPosts && !showBio && <Sidebar />}
         {!showPosts && !showBio && <Chat />}
@@ -50,24 +105,6 @@ export const Home = () => {
         ) : null }
         {showBio && <Bio />} {/* Display the Bio page when showBio state is true */}
 
-         <div className="buttons-container">
-         <button className= "buttonStyles show-chats-button" onClick={handleShowPosts}>
-          {isPostsPage ? 'Show Chats' : 'Show Posts'}
-        </button>
-  
-        {isPostsPage && (
-          <button className= "buttonStyles" onClick={handleCreatePost}>
-            {showCreate ? 'Show Posts' : 'Create Post'}
-          </button>
-        )}
-
-        {isPostsPage && !showCreate && (
-            <button className="buttonStyles" onClick={handleShowBio}>
-              Show Bio
-            </button>
-          )}
-
-         </div>
       </div>
     </div>
   );

@@ -3,6 +3,8 @@ import {db} from "../firebase"
 import { collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
 import {AuthContext} from "../context/AuthContext"
 import { ChatContext } from '../context/ChatContext';
+
+
 const Search = () => {
    const [username,setUsername] = useState("");
    const [user,setUser] = useState(null);

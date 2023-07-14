@@ -8,6 +8,7 @@ import { ChatContext } from '../context/ChatContext'
 import Posts from '../pages/Posts'
 import { ShowBio } from './ShowBio'
 //import { AuthContext } from '../context/AuthContext'
+
 const Chat = () => {
 
   const {data} = useContext(ChatContext);

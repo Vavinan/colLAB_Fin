@@ -102,7 +102,7 @@ const Posts = ({ isAuth, handleShowPosts }) => {
       <div className="homepage">
         {/*  <Search handleSelect={handleSelect} /> */}
 
-        <div className="page-scroll row">
+        <div /*className="page-scroll row"*/>
           <div className=" search-bar col-lg-6 offset-lg-3">
             <SearchBar onSearch={handleSearch} />
           </div>
@@ -157,13 +157,13 @@ const Posts = ({ isAuth, handleShowPosts }) => {
                         {post.author.name}
                       </span>
 
-                      {post.contact && (
+                      {post.author.name && (
                         <span
                           className="badge rounded-pill bg-info text-dark"
-                          onClick={() => handleSelect(post.contact)}
+                          onClick={() => handleSelect(post.author.name)}
                           style={{ cursor: "pointer" }}
                         >
-                          {post.contact}
+                          {post.author.name}
                         </span>
                       )}
                     </div>
