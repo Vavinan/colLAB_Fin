@@ -22,24 +22,18 @@ export const ShowBio = ({ user }) => {
         const userRef = doc(db, 'users', user);
         const userSnapshot = await getDoc(userRef);
 
-        if (docSnapshot.exists() && userSnapshot.exists()) {
+if (docSnapshot.exists()) {
           const eduData = docSnapshot.data().eduLevel;
           const courseOfStudyData = docSnapshot.data().courseOfStudy;
           const skillsData = docSnapshot.data().skills;
           const schoolName = docSnapshot.data().school;
-          const emailId = userSnapshot.data().email;
-          const photoURL = userSnapshot.data().photoURL;
-          const displayName = userSnapshot.data().displayName;
-          const Name = userSnapshot.data().myname;
+
 
           setEduLevel(eduData);
           setCourseOfStudy(courseOfStudyData);
           setSkills(skillsData);
           setSchool(schoolName);
-          setEmail(emailId);
-          setPhoto(photoURL);
-          setUserName(displayName);
-          setName(Name);
+
           //console.log(user);
 
         } else {
@@ -47,6 +41,19 @@ export const ShowBio = ({ user }) => {
           setCourseOfStudy('No course details available');
           setSkills('No were skills updated');
           setSchool("No school name updated")
+        }
+
+        if(userSnapshot.exists()){
+          const emailId = userSnapshot.data().email;
+          const photoURL = userSnapshot.data().photoURL;
+          const displayName = userSnapshot.data().displayName;
+          const Name = userSnapshot.data().myname;
+
+          setEmail(emailId);
+          setPhoto(photoURL);
+          setUserName(displayName);
+          setName(Name);
+
         }
       } catch (error) {
         console.error('Error fetching bio:', error);
