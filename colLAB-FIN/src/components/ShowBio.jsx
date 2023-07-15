@@ -22,7 +22,7 @@ export const ShowBio = ({ user }) => {
         const userRef = doc(db, 'users', user);
         const userSnapshot = await getDoc(userRef);
 
-if (docSnapshot.exists()) {
+        if (docSnapshot.exists()) {
           const eduData = docSnapshot.data().eduLevel;
           const courseOfStudyData = docSnapshot.data().courseOfStudy;
           const skillsData = docSnapshot.data().skills;
@@ -55,6 +55,7 @@ if (docSnapshot.exists()) {
           setName(Name);
 
         }
+
       } catch (error) {
         console.error('Error fetching bio:', error);
       }
