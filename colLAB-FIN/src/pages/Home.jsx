@@ -1,5 +1,5 @@
 import React, { useState , useContext} from 'react';
-import Sidebar from '../components/sidebar';
+import Sidebar from '../components/Sidebar';
 import Chat from '../components/Chat';
 import Posts from './Posts';
 import CreatePost from './PostPages/CreatePost';
