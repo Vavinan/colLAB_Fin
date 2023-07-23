@@ -38,7 +38,7 @@ export const Login = () => {
   return (
     <div className='login-container'>
         <div className="login-wrapper">
-          <img className="colLAB-logo" src="ColLAB.png"></img>
+          <img className="colLAB-logo" src="/ColLAB.png"></img>
           <span className="login-caption">collaborate today!</span> 
           <span className="login-title">Log In</span>
             <form className="login-form" onSubmit={handleSubmit}>
