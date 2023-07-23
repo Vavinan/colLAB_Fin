@@ -64,8 +64,8 @@ export const Home = () => {
     <div className="home">
       <div className="top-navigation-bar">
         <div className='left-top-navigation-bar'>
-           {/* <img className="collab-logo" src="src/images/ColLAB__1_-removebg-preview.png"></img>  */}
-           <img className="collab-logo" src="/ColLAB__1_-removebg-preview.png"></img>
+           {/* <img className="collab-logo" src="src/images/ColLAB.png"></img>  */}
+           <img className="collab-logo" src="/ColLAB.png"></img>
           <div className='greeting-text'>Hello, {currentUser.displayName}!</div>      
         </div>
         
