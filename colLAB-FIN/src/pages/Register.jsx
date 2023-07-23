@@ -121,7 +121,7 @@ export const Register = () => {
   return (
     <div className="register-container">
       <div className="register-wrapper">
-      <img className="colLAB-logo" src="src/images/ColLAB__1_-removebg-preview.png"></img>
+      <img className="colLAB-logo" src="/ColLAB.png"></img>
         <span className="register-caption">collaborate today!</span>
         <span className="register-title">Register</span>
         <form className="register-form" onSubmit={handleSubmit}>
