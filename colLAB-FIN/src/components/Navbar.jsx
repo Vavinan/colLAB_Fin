@@ -21,11 +21,12 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-      <span className='logo'>CHATS</span>
+      <span className='chats-header'>CHATS</span>
+      
       {currentUser && (
-        <div className='user'>
-          <img src={currentUser.photoURL} alt='' />
-          {/* <span>{currentUser.displayName}</span> */}
+        <div className='chat-user-details'>
+          <span className='chat-user-username'>@{currentUser.displayName}</span>
+          <img className='chat-user-pic' src={currentUser.photoURL} alt='' />
           {/* <button onClick={handleSignOut}>logout</button> */}
         </div>
       )}

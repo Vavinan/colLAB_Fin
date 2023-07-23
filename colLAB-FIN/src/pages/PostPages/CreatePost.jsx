@@ -51,7 +51,7 @@ const CreatePost = ( {onPostSuccess}) => {
   return (
     <div className="createPost-container">
       <div className="postForm">
-        <h1 className="createPost-heading"> Create a Project Post</h1>
+        <h1 className="createPost-heading">Create a Project Post</h1>
 
       <div className="createPost-split-container">
          
@@ -62,16 +62,18 @@ const CreatePost = ( {onPostSuccess}) => {
             </div>
 
             <div  className="mb-3">
-            <label htmlFor="posts" className="form-label"  >Description:</label>
-              <textarea placeholder='Elaborate on your idea!' className='form-control' onChange={(e)=>setPostContent(e.target.value)}></textarea>
-            </div>
-          </div>
-
-          <div className="split-container">   {/* right container */}            
-            <div  className="mb-3">
             <label htmlFor="tags" className="form-label"  >Skills Required:</label>
               <textarea placeholder='Technical Skills needed for your project...' className='form-control' onChange={(e)=>setSkills(e.target.value)}></textarea>
               </div>
+
+            
+          </div>
+
+          <div className="split-container">   {/* right container */}            
+          <div  className="mb-3">
+            <label htmlFor="posts" className="form-label"  >Description:</label>
+              <textarea rows="8" placeholder='Elaborate on your idea!' className='form-control' onChange={(e)=>setPostContent(e.target.value)}></textarea>
+            </div>
 
               {/*<div className="mb-3">
                 <label htmlFor="contact" className="form-label" >Chat User Name:</label>
@@ -82,7 +84,7 @@ const CreatePost = ( {onPostSuccess}) => {
           </div>
 
       </div>
-      <div>
+      <div className='publish-container'>
         <button className="publish-button" onClick={submitPost} >PUBLISH</button> 
 
       </div>

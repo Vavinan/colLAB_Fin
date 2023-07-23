@@ -64,7 +64,7 @@ body {
   width: 120px;
 }
 .login-container .login-wrapper .login-form .error-msg {
-  color: red;
+  color: blue;
 }
 
 .register-container {

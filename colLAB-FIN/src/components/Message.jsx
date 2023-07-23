@@ -33,19 +33,23 @@ const Message = ({message}) => {
 
 
   return (
-    <div ref = {ref} className={`message ${message.senderId === currentUser.uid && "owner"}`}>
+
+
+      <div ref = {ref} className={`message ${message.senderId === currentUser.uid && "owner"}`}>
         <div className="messageInfo">
-            <img src={  message.senderId === currentUser.uid
+            <img className='message-image' src={  message.senderId === currentUser.uid
               ? currentUser.photoURL
               : data.user.photoURL} alt=""/>
             <span>{getTimeString()}</span>
         </div>
         <div className="messageContent">
-            <p>{message.text}</p>
-            {message.image && <img src={message.image} alt="" />}
-
+            <p className='user-received-message'>{message.text}</p>
+            {message.image && 
+            <img className='message-image' src={message.image} alt="" />}
         </div>
     </div>
+
+    
   )
 }
 

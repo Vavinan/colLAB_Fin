@@ -53,52 +53,86 @@
    }, [id]);
  
    const saveBioContent = async () => {
-     const docRef = doc(db, 'bio', id); // Replace "bio" with your collection name
-     await setDoc(docRef, { eduLevel, courseOfStudy, skills,school}, { merge: true });
+     const docRef = doc(db, 'bio', id); 
+     try {
+      await setDoc(docRef, { eduLevel, courseOfStudy, skills, school }, { merge: true });
+      window.alert('Bio saved successfully!');
+    } catch (error) {
+      console.error('Error saving bio:', error);
+      window.alert('Failed to save bio. Please try again later.');
+    }
    };
  
    return (
-     <div>
-     <div>
-      <img
+    <div className='profile-page-container'>
+     <div className='profile-container'>
+      <img className='profile-pic'
            src={photo}
            alt=''
-           style={{
-             width: '100px',
-             height: '100px',
-             borderRadius: '50%',
-             objectFit: 'cover',
-           }}
-         />  
-           <h6> <strong> User Name: </strong> {userName} </h6> 
-           <h6> <strong> Name: </strong> {name} </h6> 
-           <h6> <strong> Email: </strong> {email} </h6> <br/>
- 
-     </div>
-       <textarea
-         value={eduLevel || ''}
-         onChange={(e) => setEduLevel(e.target.value)}
-         rows={5}
-       ></textarea>
-        <input
-       type="text"
-       value={courseOfStudy || ''}
-       onChange={(e) => setCourseOfStudy(e.target.value)}
-       placeholder="Course of Study"
-     />
-     <input
-       type="text"
-       value={skills || ''}
-       onChange={(e) => setSkills(e.target.value)}
-       placeholder="Skills"
-     />
-     <input
-       type="text"
-       value={school ||''}
-       onChange={(e) => setSchool(e.target.value)}
-       placeholder="School"
-     />
-       <button onClick={saveBioContent}>Save</button>
+         />
+      <div className='profile-details'>
+          <p className='profile-name'>{name}</p>
+          <p className='profile-username'>@{userName}</p> 
+          <p className='profile-email'>{email}</p>
+
+      </div>
+    </div>
+    <div className='bio-container'>
+      <p className='bio'>Bio:</p>
+    <div className='profile-bio-container'>
+        <div className='bio-school'>
+        
+        <div>
+        <span className='input-filler'>Education Level:</span>
+          <input className='input-school'
+              type="text"
+              value={eduLevel || ''}
+              onChange={(e) => setEduLevel(e.target.value)}
+              placeholder="Education Level:"
+            /></div>
+        
+          <div>
+          <span className='input-filler'>Course of Study:</span>
+            <input className='input-school'
+            type="text"
+            value={courseOfStudy || ''}
+            onChange={(e) => setCourseOfStudy(e.target.value)}
+            placeholder="Course of Study:"
+          />
+          </div>
+
+          <div>
+          <span className='input-filler'>School: </span>
+            <input className='input-school'
+            type="text"
+            value={school ||''}
+            onChange={(e) => setSchool(e.target.value)}
+            placeholder="School:"
+          />
+          </div>
+          </div> 
+          
+
+        <textarea className='skills-container'
+          value={skills || ''}
+          onChange={(e) => setSkills(e.target.value)}
+          rows="5"
+          cols="30"
+          placeholder="Skills:"
+        ></textarea>
+        
+        
+
+    </div>
+    <div className='button-div'>
+      <button className='save-button' onClick={saveBioContent}>Save</button>
+    </div>
+    
+
+
+    </div>
+      
+           
      </div>
    );
  };
@@ -108,76 +142,3 @@
  
  
  
- 
- 
- /*import React, { useState, useEffect } from 'react';
-import { doc, setDoc, getDoc } from 'firebase/firestore';
-import { auth, db } from '../../firebase';
-const Bio = () => {
-  const [eduLevel, seteduLevel] = useState('');
-  const [courseOfStudy, setCourseOfStudy] = useState('');
-  const [skills, setSkills] = useState('');
-  const [school, setSchool] = useState('');
-
-  const id = auth .currentUser.uid;
-  useEffect(() => {
-    const getBioContent = async () => {
-      const docRef = doc(db, 'bio', id); // Replace "bio" with your collection name
-      const docSnap = await getDoc(docRef);
-      if (docSnap.exists()) {
-        seteduLevel(docSnap.data().eduLevel);
-        setCourseOfStudy(docSnap.data().courseOfStudy);
-        setSkills(docSnap.data().skills);
-        setSchool(docSnap.data().school);
-      } else {
-        seteduLevel('');
-        setCourseOfStudy('');
-        setSkills('');
-        setSchool('');
-      }
-    };
-
-    getBioContent();
-  }, [id]);
-
-  const saveBioContent = async () => {
-    const docRef = doc(db, 'bio', id); // Replace "bio" with your collection name
-    await setDoc(docRef, { eduLevel, courseOfStudy, skills,school}, { merge: true });
-  };
-
-  return (
-
-    <div>
-        
-    </div>
-
-    <div>
-      <textarea
-        value={eduLevel}
-        onChange={(e) => seteduLevel(e.target.value)}
-        rows={5}
-      ></textarea>
-       <input
-      type="text"
-      value={courseOfStudy}
-      onChange={(e) => setCourseOfStudy(e.target.value)}
-      placeholder="Course of Study"
-    />
-    <input
-      type="text"
-      value={skills}
-      onChange={(e) => setSkills(e.target.value)}
-      placeholder="Skills"
-    />
-    <input
-      type="text"
-      value={school}
-      onChange={(e) => setSchool(e.target.value)}
-      placeholder="school"
-    />
-      <button onClick={saveBioContent}>Save</button>
-    </div>
-  );
-};
-
-export default Bio;*/

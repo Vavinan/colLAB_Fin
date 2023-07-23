@@ -93,7 +93,7 @@ export const Home = () => {
       </div>
     
       
-      <div className="container">
+      <div className="chatpage-container">
         {!showPosts && !showBio && <Sidebar />}
         {!showPosts && !showBio && <Chat />}
         {showPosts ? (

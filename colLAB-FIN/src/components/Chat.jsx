@@ -25,21 +25,40 @@ const Chat = () => {
   };
   return (
     <div className='chat'>
+      
+      {/* TOP HALF */}
       <div className="chatInfo">
-        <span> {data.user?.displayName}</span>
-        {data.showInput && <button onClick={toggleBioPopup}>Open Bio</button>}
-        <div className="chatIcons">
-        {/* <img src={cam}/>
+      <div>
+        <img className='chat-pfp'   src={data.user?.photoURL}></img>
+        <span className='chat-name'>{data.user?.displayName}</span>
+      </div>   
+
+        {data.showInput && 
+        <button class='show-bio-btn' onClick={toggleBioPopup}>Open Bio</button>}
+        {/* <div className="chatIcons">
+        <img src={cam}/>
           <img src={addicon}/>
-          <img src={more}/>*/}
-        </div>
+          <img src={more}/>
+        </div> */}
       </div>
+
+      {/* BOTTOM HALF */}
       <Messages/>
+      
       {data.showInput && <InputMessages />}
+      
       {showPosts && <Posts />}
-      {showBioPopup && <div className="popup"> 
-      <button className="close-button" onClick={closeBioPopup}>X</button>
-      <ShowBio user={data.user?.uid} /> 
+      
+      {showBioPopup && 
+      
+      <div className="bio-popup"> 
+      
+        <ShowBio user={data.user?.uid} />
+
+       
+
+      <button className="bio-popup-close-btn" onClick={closeBioPopup}>Close</button>
+      
       </div>}
 
     </div>
