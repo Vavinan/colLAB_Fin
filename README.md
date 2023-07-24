@@ -42,17 +42,17 @@ TESTING ………………………………………………………………
 
 **Resources (links):**
 
-README: https://docs.google.com/document/d/1Ob-i8ObSaV8LG8X8q_dhs5m8n1mydT5oBp-V1o_nLLw/edit?usp=sharing 
+*README:* https://docs.google.com/document/d/1Ob-i8ObSaV8LG8X8q_dhs5m8n1mydT5oBp-V1o_nLLw/edit?usp=sharing 
 
-Log: https://docs.google.com/spreadsheets/d/1JcaQKGxFl1Jkp5MtqesL5XxYCOTklwvaUtm6KRnZ-WU/edit#gid=0 
+*Log:* https://docs.google.com/spreadsheets/d/1JcaQKGxFl1Jkp5MtqesL5XxYCOTklwvaUtm6KRnZ-WU/edit#gid=0 
 
-Poster: https://drive.google.com/file/d/1ElH3_Ah2UszAgLR6nqC42FOuFNQCA3x0/view?usp=drive_link 
+*Poster:* https://drive.google.com/file/d/1ElH3_Ah2UszAgLR6nqC42FOuFNQCA3x0/view?usp=drive_link 
 
-Video: https://vimeo.com/847759082?share=copy 
+*Video:* https://vimeo.com/847759082?share=copy 
 
-Website: https://collab-alpha.vercel.app/
+*Website:* https://collab-alpha.vercel.app/
 
-GitHub: https://github.com/Vavinan/colLAB_Fin.git 
+*GitHub:* https://github.com/Vavinan/colLAB_Fin.git 
 </br></br>
 
 **Project Scope:**
