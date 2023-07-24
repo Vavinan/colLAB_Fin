@@ -112,9 +112,8 @@ Since we are both completely new to web development, we decided to learn and do 
 **TIMELINE**
 
 
-![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/67edfdd1-a7a5-478d-86cb-2d0f5ff3acba)
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/0b7e3ecb-5fc9-4487-a665-ac8700d9a020)
 
-Project Timeline Plan Table
 </br></br>
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -131,7 +130,8 @@ When the website is opened, the user will be greeted with a log in screen. If th
 
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/acfd62aa-62f9-46cf-970a-10bec1f34788)
 
-Log In Form and Register Form
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/246b4532-7385-4889-a238-4f4d8ee1fd15)
+
 </br></br>
 
 
@@ -139,7 +139,8 @@ Log In Form and Register Form
 
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/643f7dac-f07c-4973-ada6-285d521fd23f)
 
-Email of Confirmation Link
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/8b61addb-043f-4cef-86e0-97b56482b370)
+
 </br></br>
 
 
@@ -153,7 +154,8 @@ Create Post, buttons: Chats, Home). On the right, there is a logout button which
 
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/959b6492-3cd3-4bc4-b52a-bab27c74871b)
 
-Navigation Bar (on Homepage)
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/ec65988c-da4e-42cf-9beb-1b5ebafd8b63)
+
 </br></br>
 
 
@@ -164,7 +166,8 @@ Users can view project listings in the Homepage. Each project listing is display
 
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/639f41bd-8913-43cf-b1d2-a078c981949b)
 
-Example of Project Listings
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/3129d2dc-2038-47b7-a9a5-94aecc3e7244)
+
 
 </br></br>
 
@@ -175,7 +178,8 @@ Users can use the searchbox in the homepage to search for projects they might be
 
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/f0506f31-4d0b-4f57-9423-e148b604f226)
 
-Searchbox for Project Listings
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/a566b456-d035-4ccb-9769-ea4b316022a8)
+
 </br></br>
 
 
@@ -188,7 +192,8 @@ fields contain the Title, Description and Skills required. After clicking on pub
 
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/2f0f3112-e982-4781-a3c6-545143204e74)
 
-Create a Project Post Form
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/4e6dc668-02db-4578-b682-2d0b366c28e7)
+
 </br></br>
 
 
@@ -204,7 +209,8 @@ have the relevant skills they need for their project.
 
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/ce7940e0-44b4-4a1d-be62-95072d677a46)
 
-User Profile Page
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/be50c5c2-b0dc-4fb7-b9eb-8e7c476c00eb)
+
 </br></br>
 
 
@@ -226,7 +232,8 @@ can input their message in the input box below and even include an attachment by
 
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/de24ba0d-0bae-44ba-a753-e9d60279d66f)
 
-Chat Page
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/de883122-bda6-472f-85f5-3a664986f9b1)
+
 </br></br>
 
 
@@ -235,7 +242,8 @@ Futhermore, users can view the bio of the user they are talking to, by clicking 
 
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/22047474-757f-4b27-a030-1ef8dad32523)
 
-Chat User Show Bio
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/ae1d4f29-f8ea-4d11-baaa-541016598ca0)
+
 
 </br></br></br>
 
