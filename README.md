@@ -282,11 +282,9 @@ website.
 Integration Testing - Our chat feature depended heavily on integration testing. There were many aspects such as messages from user and to user, user contacts, messages date and time and many 
 
 more. We needed all these aspects to work together in order to achieve a proper chat function. So, we had to test how the different aspects of the chat feature interacted with one another and 
-
 catch any errors or bugs.
 
 Acceptance Testing - We conducted acceptance testing to check that all our intended functions are fulfilled and working well. The website was shared with some users to test if they meet the 
-
 requirements, at the same time, we were able to obtain some feedback.
 
 
