@@ -103,9 +103,8 @@ To better understand what our website would offer, here are some user stories on
 
 Our project involves building a website and there are many key elements to fulfill in order to get it up and running. We came up with the following development plan and timeline.
 
-![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/4415317c-2fa9-49be-b395-97991580fdf1)
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/7904b249-3203-4958-961b-57d6deddccf0)
 
-<u> Project Development Plan Table </u>
 </br></br>
 
 Since we are both completely new to web development, we decided to learn and do it the most fundamental way. We used very little frameworks (less ReactJS) to aid our project so we can get comfortable with web development using basic HTML/CSS/Javascript.
