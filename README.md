@@ -47,6 +47,8 @@ Poster: https://drive.google.com/file/d/1ElH3_Ah2UszAgLR6nqC42FOuFNQCA3x0/view?u
 Video: https://vimeo.com/847759082?share=copy 
 
 Website: https://collab-alpha.vercel.app/
+
+GitHub: https://github.com/Vavinan/colLAB_Fin.git 
 </br></br>
 
 **Project Scope:**
