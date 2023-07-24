@@ -1,5 +1,4 @@
 # colLAB_Fin
-# collab-test
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/11615a4e-55c4-4a83-9c5b-cf0c71bbb888)
 
 
