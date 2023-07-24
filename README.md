@@ -123,7 +123,7 @@ Since we are both completely new to web development, we decided to learn and do 
 
 In order to ensure that our user stories come true, we have developed the following core features.
 
--*Account Login/Register*
+-*Account Login/Register*-
 
 
 When the website is opened, the user will be greeted with a log in screen. If they are new users, they can click on the Register button at the bottom of the page to register a new account.
