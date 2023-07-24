@@ -11,12 +11,16 @@ README DOCUMENT
 
 Jeevanandham Vavinan
 Isaac Eng
-CONTENT PAGE
-INTRODUCTION …………………………………………………………………………………… 3
-PLANNING ………………………………………………………………………………………….  5
-CORE FEATURES …………………………………………………………………………………. 6
-SOFTWARE ENGINEERING RELATED INFORMATION ……………………………………. 11
-TESTING …………………………………………………………………………………………… 12
+CONTENT                                                PAGE
+INTRODUCTION ……………………………………………………………………………………………………………… 3
+
+PLANNING ………………………………………………………………………………………………………………………… 5
+
+CORE FEATURES …………………………………………………………………………………………………………… 6
+
+SOFTWARE ENGINEERING RELATED INFORMATION …………………………………… 11
+
+TESTING …………………………………………………………………………………………………………………………… 12
 
 
 INTRODUCTION
