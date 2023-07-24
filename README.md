@@ -49,35 +49,23 @@ Website: https://collab-alpha.vercel.app/
 Project Scope:
 Our project aims to provide a web platform that connects students with similar interests and project ideas, allowing them to form effective teams to achieve it.
 
-Our project will be an open-source website where users can view project listings, listed by other users that want to work on a project idea and are looking for potential collaborators, on the 
-
-website and join the projects they are interested in.
+Our project will be an open-source website where users can view project listings, listed by other users that want to work on a project idea and are looking for potential collaborators, on the website and join the projects they are interested in.
 
 
-We are targetting polytechnic/university students as most of them tend to be equipped with technical skills such as programming, engineering and design skills, which are huge contributing factors
+We are targetting polytechnic/university students as most of them tend to be equipped with technical skills such as programming, engineering and design skills, which are huge contributing factors towards projects. Students of such groups also tend to be more adventurous and may have plenty of project ideas that they would like to work on.
 
-towards projects. Students of such groups also tend to be more adventurous and may have plenty of project ideas that they would like to work on.
-
-ColLAB’s main mission is to connect potential project collaborators with those who have project ideas. Our platform will allows them to find one another so that they can start working on the 
-
-project.
+ColLAB’s main mission is to connect potential project collaborators with those who have project ideas. Our platform will allows them to find one another so that they can start working on the project.
 
 
 Problem Motivation:
 
-Many students have great project ideas but lack the necessary team members to see it through. Although they may seek assistance from their friends or classmates, finding a dependable and like-
+Many students have great project ideas but lack the necessary team members to see it through. Although they may seek assistance from their friends or classmates, finding a dependable and like minded team member can be difficult, especially if the project requires certain skill sets. Even posting on popular platforms, like Reddit, can be troublesome,  time-consuming and inefficient. 
 
-minded team member can be difficult, especially if the project requires certain skill sets. Even posting on popular platforms, like Reddit, can be troublesome,  time-consuming and inefficient. 
-
-Thus, their idea would go to waste. Why don't institutions have a platform that allows students, with project ideas, to find like-minded individuals that could collaborate on the project, in 
-
-order to make the idea come true?
+Thus, their idea would go to waste. Why don't institutions have a platform that allows students, with project ideas, to find like-minded individuals that could collaborate on the project, in order to make the idea come true?
 
 That is why we decided to work on this project, “ColLAB”. With ColLAB, students are able to find potential project partners efficiently and find projects to work on to expand their experiences. 
 
-In turn, there would be more projects initiated as students will find it easy to find project partners and hence initiate projects. There would really be many advantages with the usage of this 
-
-website.
+In turn, there would be more projects initiated as students will find it easy to find project partners and hence initiate projects. There would really be many advantages with the usage of this website.
 
 
 Project Deliverables:
@@ -99,8 +87,7 @@ Tech Stack:
       # HTML
       
       # CSS
-
-      
+    
       # Javascript
       
       # ReactJS
@@ -119,9 +106,7 @@ Our project involves building a website and there are many key elements to fulfi
 Project Development Plan Table
 
 
-Since we are both completely new to web development, we decided to learn and do it the most fundamental way. We used very little frameworks (less ReactJS) to aid our project so we can get 
-
-comfortable with web development using basic HTML/CSS/Javascript.
+Since we are both completely new to web development, we decided to learn and do it the most fundamental way. We used very little frameworks (less ReactJS) to aid our project so we can get comfortable with web development using basic HTML/CSS/Javascript.
 
 
 TIMELINE
@@ -146,11 +131,7 @@ When the website is opened, the user will be greeted with a log in screen. If th
 Log In Form and Register Form
 
 
-[For new users] Users will have to input a username, name, email and password, they also have an option to include a profile picture, by selecting the “Add an Avatar” button. Upon filling the 
-
-form and clicking “Register”, users will receive a confirmation email of their registered email. To allow the new account to be activated, they have to verify their email address by clicking on
-
-the link in the email. Once completed, they can log in.
+[For new users] Users will have to input a username, name, email and password, they also have an option to include a profile picture, by selecting the “Add an Avatar” button. Upon filling the form and clicking “Register”, users will receive a confirmation email of their registered email. To allow the new account to be activated, they have to verify their email address by clicking on the link in the email. Once completed, they can log in.
 
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/643f7dac-f07c-4973-ada6-285d521fd23f)
 
@@ -159,9 +140,7 @@ Email of Confirmation Link
 
 Navigation Bar
 
-A navigation bar is fixed at the top of the website to allow for easy access between the different pages in the website. On the left, there is the colLAB logo and a greeting to your specific 
-
-username. In the middle, users can select between the different pages of the website. This changes dynamically dependent on the page (e.g. on Homepage, buttons: Chats, Create Post, Profile. On 
+A navigation bar is fixed at the top of the website to allow for easy access between the different pages in the website. On the left, there is the colLAB logo and a greeting to your specific username. In the middle, users can select between the different pages of the website. This changes dynamically dependent on the page (e.g. on Homepage, buttons: Chats, Create Post, Profile. On 
 
 
 Create Post, buttons: Chats, Home). On the right, there is a logout button which logs the current user out when clicked.
@@ -173,9 +152,7 @@ Navigation Bar (on Homepage)
 
 Project Listings
 
-Users can view project listings in the Homepage. Each project listing is displayed in a card form with its Title (bolded at the top), description, skills required for the project and the username
-
-of the creator of the post.
+Users can view project listings in the Homepage. Each project listing is displayed in a card form with its Title (bolded at the top), description, skills required for the project and the username of the creator of the post.
 
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/639f41bd-8913-43cf-b1d2-a078c981949b)
 
@@ -265,23 +242,15 @@ future on whether such feature is really a need.
 
 SOFTWARE DESIGN PATTERNS
 
-Observer Pattern - We allow changes to the user’s bio, so any single user can change his/her bio anytime. When the bio is changed, other users should be able to view the change in the “show bio” 
-
-button in chat page.
+Observer Pattern - We allow changes to the user’s bio, so any single user can change his/her bio anytime. When the bio is changed, other users should be able to view the change in the “show bio” button in chat page.
 
 TESTING
 
-Regression Testing - Once a new feature is created, we ensured that we test out the feature and other features, to check if there is any function that is being compromised. This was especially 
+Regression Testing - Once a new feature is created, we ensured that we test out the feature and other features, to check if there is any function that is being compromised. This was especially important as it allows us to detect issues with the code early.
 
-important as it allows us to detect issues with the code early.
+Unit Testing - We incorporated unit testing for the whole project. We had to ensure that every feature we put out was good to go so we tested it multiple times before officially adding it to the website.
 
-Unit Testing - We incorporated unit testing for the whole project. We had to ensure that every feature we put out was good to go so we tested it multiple times before officially adding it to the 
-
-website.
-
-Integration Testing - Our chat feature depended heavily on integration testing. There were many aspects such as messages from user and to user, user contacts, messages date and time and many 
-
-more. We needed all these aspects to work together in order to achieve a proper chat function. So, we had to test how the different aspects of the chat feature interacted with one another and 
+Integration Testing - Our chat feature depended heavily on integration testing. There were many aspects such as messages from user and to user, user contacts, messages date and time and many more. We needed all these aspects to work together in order to achieve a proper chat function. So, we had to test how the different aspects of the chat feature interacted with one another and 
 catch any errors or bugs.
 
 Acceptance Testing - We conducted acceptance testing to check that all our intended functions are fulfilled and working well. The website was shared with some users to test if they meet the 
