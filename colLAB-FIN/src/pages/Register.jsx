@@ -13,6 +13,7 @@ export const Register = () => {
   const navigate = useNavigate();
   const [verification, setVerification] = useState(false);
   const [username,setUsername] = useState("");
+  const [myName,setMyName] = useState("");
   const [nameExists,setNameExists] = useState(false)
 
   const handleKey = async () =>{
@@ -41,9 +42,10 @@ export const Register = () => {
 
     e.preventDefault();
     const displayName = e.target[0].value;
-    const email = e.target[1].value;
-    const password = e.target[2].value;
-    const file = e.target[3].files[0];
+    const myname = e.target[1].value;
+    const email = e.target[2].value;
+    const password = e.target[3].value;
+    const file = e.target[4].files[0];
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(nameExists){
       return
@@ -75,6 +77,7 @@ export const Register = () => {
               displayName,
               email,
               photoURL: downloadURL,
+              myname,
             });
 
             await setDoc(doc(db,"userChats",res.user.uid),{});
@@ -116,24 +119,31 @@ export const Register = () => {
 
 
   return (
-    <div className="formContainer">
-      <div className="formWrapper">
-        <span className="logo">CHAT</span>
-        <span className="title">Register</span>
-        <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="NAME" name='displayName' 
+    <div className="register-container">
+      <div className="register-wrapper">
+      <img className="colLAB-logo" src="src/images/ColLAB__1_-removebg-preview.png"></img>
+        <span className="register-caption">collaborate today!</span>
+        <span className="register-title">Register</span>
+        <form className="register-form" onSubmit={handleSubmit}>
+          <input type="text" placeholder="Username" name='displayName' 
             onKeyDown ={handleKey}  
             onChange={ (e) =>setUsername(e.target.value)} value={username} />
-          {nameExists && <span>Name already exists</span>}
+          {nameExists && <span>Username already exists.</span>}
+          <input type="text" placeholder = "Name" />
           <input type="email" placeholder="Email" />
-          <input type="password" placeholder="password" />
+          <input type="Password" placeholder="password" />
           <input style={{ display: "none" }} type="file" id="file" />
-          <label htmlFor="file">
-            <img src={add} alt="" />
-            <span>Add an avatar</span>
+          <label className="profile-pic-button" htmlFor="file">
+            <div className="profile-pic-container">
+              <img className="profile-pic-icon" src="src/images/add.png"/>
+              <span className="profile-pic-caption">Add an avatar</span>
+            </div>
           </label>
-          <button>Register</button>
-          {err && <span>Something went wrong</span>}
+
+          
+          
+          <button className="register-button">Register</button>
+          {err && <span className="error-msg">*Something went wrong</span>}
           {verification && <span>A verification email has been sent to your email address. Please verify your email before logging in.</span>}
 
         </form>

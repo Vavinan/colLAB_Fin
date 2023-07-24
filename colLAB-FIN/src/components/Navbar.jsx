@@ -6,27 +6,28 @@ const Navbar = () => {
   const { currentUser } = useContext(AuthContext);
 
 
-  const handleSignOut = () => {
-    auth
-      .signOut()
-      .then(() => {
-        // Handle sign out success
-      })
-      .catch((error) => {
-        // Handle sign out error
-        console.log(error);
-      });
-  };
+  // const handleSignOut = () => {
+  //   auth
+  //     .signOut()
+  //     .then(() => {
+  //       // Handle sign out success
+  //     })
+  //     .catch((error) => {
+  //       // Handle sign out error
+  //       console.log(error);
+  //     });
+  // };
 
 
   return (
     <div className='navbar'>
-      <span className='logo'>CHAT</span>
+      <span className='chats-header'>CHATS</span>
+      
       {currentUser && (
-        <div className='user'>
-          <img src={currentUser.photoURL} alt='' />
-          <span>{currentUser.displayName}</span>
-          <button onClick={handleSignOut}>logout</button>
+        <div className='chat-user-details'>
+          <span className='chat-user-username'>@{currentUser.displayName}</span>
+          <img className='chat-user-pic' src={currentUser.photoURL} alt='' />
+          {/* <button onClick={handleSignOut}>logout</button> */}
         </div>
       )}
 

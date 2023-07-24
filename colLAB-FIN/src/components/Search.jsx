@@ -3,6 +3,8 @@ import {db} from "../firebase"
 import { collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
 import {AuthContext} from "../context/AuthContext"
 import { ChatContext } from '../context/ChatContext';
+
+
 const Search = () => {
    const [username,setUsername] = useState("");
    const [user,setUser] = useState(null);
@@ -79,17 +81,21 @@ const Search = () => {
   
   return (
     <div className='search'>
-      <div className="searchform">
-        <input type="text" placeholder='find contact' 
+      
+      <div>
+        <input className="chat-searchbar" type="text" placeholder='find contact... @' 
         onKeyDown={handleKey}  
         onChange={ (e) =>setUsername(e.target.value)} 
           value={username}
         />
       </div>
+
       {err && <span> Not found</span>}
-      { user && <div className="userChat" onClick={handleSelect}>
-        <img src={user.photoURL} alt="" />
-        <div className="userChatInfo">
+      
+      { user && 
+      <div className="searched-user" onClick={handleSelect}>
+        <img className='searched-user-pic' src={user.photoURL} alt="" />
+        <div className="searched-user-username">
           <span>{user.displayName}</span>
         </div>
       </div> }

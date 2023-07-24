@@ -5,6 +5,7 @@ import { auth, db } from "../firebase";
 import SearchBar from "./PostPages/Searchbar";
 import Fuse from "fuse.js";
 import "./PostPages/postcss.css";
+
 const Posts = ({ isAuth, handleShowPosts }) => {
   const [postLists, setPostLists] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -99,86 +100,114 @@ const Posts = ({ isAuth, handleShowPosts }) => {
   }
   return (
     <>
+
       <div className="homepage">
+      <div className="homepage-design">
+        <p className="homepage-caption">Start Collaborating TODAY!</p>
+      <div className="search-bar col-lg-6 offset-lg-3">
+            <SearchBar onSearch={handleSearch}/>
+        </div>
+      </div>
+      
         {/*  <Search handleSelect={handleSelect} /> */}
 
-        <div className="page-scroll row">
-          <div className=" search-bar col-lg-6 offset-lg-3">
-            <SearchBar onSearch={handleSearch} />
-          </div>
-          <div>
+        
+          
+          <div className="homepage-posts-container">
             {filteredPosts.length === 0 ? (
-              <h3>No posts</h3>
+              <h3>No post found.</h3>
             ) : (
               filteredPosts.map((post) => {
                 const content = isPostExpanded(post.id)
                   ? post.postContent
-                  : post.postContent.slice(0, 300) + "...";
+                  : post.postContent.slice(0, 300);
                 const shouldShowButton = post.postContent.length > 300;
 
                 return (
-                  <div key={post.id} className="card mb-4 shadow-small">
+                  <div key={post.id} className="card mb-4 ml-10 mr-10 border-0 shadow color:">
                     <div className="card-body">
-                      {isAuth &&
+                    {isAuth &&
                         auth.currentUser &&
                         post.author.id === auth.currentUser.uid && (
-                          <div className="d-flex justify-content-end">
+                          
                             <button
-                              className="btn btn-danger my-3 mx-3"
+                              className="delete-button"
                               onClick={() => {
                                 deletePost(post.id);
                               }}
                             >
-                              X
+                              Delete Post
                             </button>
-                          </div>
+                          
                         )}
+                      
                       <h5 className="card-title mb-3 fw-bold">{post.title} </h5>
                       <p className="card-text mb-3">
-                        {content}
+                        <strong>Description:</strong> {content}
                         {shouldShowButton && (
                           <button
-                            className="btn btn-link"
+                            className="readmore-btn"
                             onClick={() => toggleExpand(post.id)}
                           >
                             {isPostExpanded(post.id)
                               ? "Read less"
-                              : "Read more"}
+                              : "...Read more"}
                           </button>
                         )}
                       </p>
                       {post.skills && (
                         <div className="skills-container">
-                          <h6>Skills Required:</h6>
-                          <p>{post.skills}</p>
+                          <h6><strong>Skills Required:</strong> {post.skills}</h6>
                         </div>
                       )}
-                      <span className="badge rounded-pill bg-dark">
-                        {post.author.name}
+                      <span className="created-by">
+                        Created By: 
                       </span>
 
                       {post.author.name && (
                         <span
-                          className="badge rounded-pill bg-info text-dark"
-                          onClick={() => handleSelect(post.contact)}
+                          className="badge rounded-pill"
+                          onClick={() => handleSelect(post.author.name)}
                           style={{ cursor: "pointer" }}
                         >
-                          {post.contact}
+                          {post.author.name}
                         </span>
                       )}
                     </div>
+
+                    
                   </div>
                 );
               })
             )}
           </div>
-        </div>
+        
+
+        
       </div>
     </>
   );
 };
 
 export default Posts;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*import React from 'react'
 import { useEffect,useState } from 'react';
@@ -311,6 +340,7 @@ const Home = ({isAuth}) => {
 
 */
 
+
 /*return (
   <div className="homepage">
    {postLists.length ===0 ? <h3> No posts</h3> : postLists.map((post)=>{
@@ -321,8 +351,8 @@ const Home = ({isAuth}) => {
  {/*        {isAuth && post.author.id ===auth.currentUser.uid &&     
         <div className="d-flex justify-content-end">
          <button className="btn btn-danger my-3 mx-3" onClick={()=>{deletePost(post.id)}}> X </button>
-       </div> } */ //}    {isAuth && auth.currentUser && post.author.id === auth.currentUser.uid && (
-/*  <div className="d-flex justify-content-end">
+       </div> } *///}    {isAuth && auth.currentUser && post.author.id === auth.currentUser.uid && (    
+      /*  <div className="d-flex justify-content-end">
          <button className="btn btn-danger my-3 mx-3" onClick={()=>{deletePost(post.id)}}> X </button>
        </div>) }
         <h5 className="card-title mb-3 fw-bold">{post.title} </h5>

@@ -40,11 +40,11 @@ return (
       const { text } = lastMessage || {};
 
       return (
-        <div className="userChat" key={chatId} onClick={() => handleSelect(userInfo)}>
-          <img src={photoURL} alt="" />
-          <div className="userChatInfo">
-            <span>{displayName}</span>
-            <p>{text}</p>
+        <div className="users-chat-container" key={chatId} onClick={() => handleSelect(userInfo)}>
+          <img className='chat-container-profile-pic' src={photoURL} alt="" />
+          <div className="chat-container-user-details">
+            <span className='chat-container-username'>{displayName}</span>
+            <p className='last-message'>{text}</p>
           </div>
         </div>
       );

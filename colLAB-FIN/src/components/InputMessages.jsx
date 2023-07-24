@@ -73,16 +73,22 @@ const InputMessages = () => {
   };
 
   return (
-    <div className='input'>
-      <input type="text" placeholder='Type Something.....' onChange={ (e) => setText(e.target.value)} value={text}/>
-        <div className="send">
-          <img src={attach} alt=""/>
-          <input type="file" style={{display:"none"}} id="file" onChange={ (e) => setImage(e.target.files[0]) }/>
-          <label htmlFor='file'>
-            <img src={addimg} alt=""/>
-          </label>
-          <button onClick={handleSend}> Send</button>
+    <div className='text-message-container'>
+      
+      <input className='text-message-box' type="text" placeholder='Type Something.....' onChange={ (e) => setText(e.target.value)} value={text}/>
+      
+      <div className="right-message-box">
+        {/* <img src={attach} alt=""/> */}
+          
+        <input type="file" style={{display:"none"}} id="file" onChange={ (e) => setImage(e.target.files[0]) }/>
+          
+        <label className='insert-pic-btn' htmlFor='file'>
+          <img className='picture-icon' src={addimg} alt=""/>
+        </label>
+          
+        <button className='send-text-button' onClick={handleSend}> Send</button>
         </div>
+    
     </div>
 
   )
