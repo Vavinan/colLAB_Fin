@@ -64,9 +64,8 @@ Our project will be an open-source website where users can view project listings
 We are targetting polytechnic/university students as most of them tend to be equipped with technical skills such as programming, engineering and design skills, which are huge contributing factors towards projects. Students of such groups also tend to be more adventurous and may have plenty of project ideas that they would like to work on.
 
 ColLAB’s main mission is to connect potential project collaborators with those who have project ideas. Our platform will allows them to find one another so that they can start working on the project.
-</br>
+</br></br>
 **Problem Motivation:**
-
 Many students have great project ideas but lack the necessary team members to see it through. Although they may seek assistance from their friends or classmates, finding a dependable and like minded team member can be difficult, especially if the project requires certain skill sets. Even posting on popular platforms, like Reddit, can be troublesome,  time-consuming and inefficient. 
 
 Thus, their idea would go to waste. Why don't institutions have a platform that allows students, with project ideas, to find like-minded individuals that could collaborate on the project, in order to make the idea come true?
@@ -74,11 +73,10 @@ Thus, their idea would go to waste. Why don't institutions have a platform that 
 That is why we decided to work on this project, “ColLAB”. With ColLAB, students are able to find potential project partners efficiently and find projects to work on to expand their experiences. 
 
 In turn, there would be more projects initiated as students will find it easy to find project partners and hence initiate projects. There would really be many advantages with the usage of this website.
-</br>
+</br></br>
 **Project Deliverables:**
-
 To better understand what our website would offer, here are some user stories on how the users can utilise our website.
-</br>
+</br></br>
 **User Stories:**
 
 1. As a student with a project idea, I want to find team members who share my interests and can contribute their skills to the project.
@@ -86,7 +84,8 @@ To better understand what our website would offer, here are some user stories on
 2. As a student seeking a project team, I want to browse a platform that lists out projects based on my interests and skills.
 
 3. As a student with a project idea/seeking a project team, I want to be able to communicate with my potential project partners.
-</br>
+</br></br>
+
 **Tech Stack:**
 
       # HTML
@@ -100,7 +99,7 @@ To better understand what our website would offer, here are some user stories on
       # Firebase (Database)
       
       # PLANNING
- </br> **PROJECT DEVELOPMENT PLAN**
+ </br></br> **PROJECT DEVELOPMENT PLAN**
 
 Our project involves building a website and there are many key elements to fulfill in order to get it up and running. We came up with the following development plan and timeline.
 
@@ -110,7 +109,7 @@ Project Development Plan Table
 </br></br>
 
 Since we are both completely new to web development, we decided to learn and do it the most fundamental way. We used very little frameworks (less ReactJS) to aid our project so we can get comfortable with web development using basic HTML/CSS/Javascript.
-</br>
+</br></br>
 **TIMELINE**
 
 
