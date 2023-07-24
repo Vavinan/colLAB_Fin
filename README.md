@@ -5,10 +5,7 @@
 **ColLAB**
 *ORBITAL 2023*
 README DOCUMENT
-
-
-
-
+<\br>
 Jeevanandham Vavinan
 
 Isaac Eng
@@ -25,6 +22,7 @@ SOFTWARE ENGINEERING RELATED INFORMATION …………………………………
 
 TESTING …………………………………………………………………………………………………………………………… 12
 
+<\br>
 
 #**INTRODUCTION**#
 
@@ -33,6 +31,7 @@ TESTING ………………………………………………………………
 ***Level of Achievement: Gemini***
 
 *Members: Jeevanandham Vavinan [A0253526E] and Isaac Eng Hong Yeow [A0253005W]*
+<\br>
 
 **Resources (links):**
 
@@ -45,6 +44,7 @@ Poster: https://drive.google.com/file/d/1ElH3_Ah2UszAgLR6nqC42FOuFNQCA3x0/view?u
 Video: https://vimeo.com/847759082?share=copy 
 
 Website: https://collab-alpha.vercel.app/
+<\br>
 
 **Project Scope:**
 Our project aims to provide a web platform that connects students with similar interests and project ideas, allowing them to form effective teams to achieve it.
@@ -56,7 +56,7 @@ We are targetting polytechnic/university students as most of them tend to be equ
 
 ColLAB’s main mission is to connect potential project collaborators with those who have project ideas. Our platform will allows them to find one another so that they can start working on the project.
 
-
+<\br>
 **Problem Motivation:**
 
 Many students have great project ideas but lack the necessary team members to see it through. Although they may seek assistance from their friends or classmates, finding a dependable and like minded team member can be difficult, especially if the project requires certain skill sets. Even posting on popular platforms, like Reddit, can be troublesome,  time-consuming and inefficient. 
@@ -67,12 +67,12 @@ That is why we decided to work on this project, “ColLAB”. With ColLAB, stude
 
 In turn, there would be more projects initiated as students will find it easy to find project partners and hence initiate projects. There would really be many advantages with the usage of this website.
 
-
+<\br>
 **Project Deliverables:**
 
 To better understand what our website would offer, here are some user stories on how the users can utilise our website.
 
-
+<\br>
 **User Stories:**
 
 1. As a student with a project idea, I want to find team members who share my interests and can contribute their skills to the project.
@@ -81,7 +81,7 @@ To better understand what our website would offer, here are some user stories on
 
 3. As a student with a project idea/seeking a project team, I want to be able to communicate with my potential project partners.
 
-
+<\br>
 **Tech Stack:**
 
       # HTML
@@ -96,7 +96,7 @@ To better understand what our website would offer, here are some user stories on
       
       # PLANNING
       
-
+<\br>
 **PROJECT DEVELOPMENT PLAN**
 
 Our project involves building a website and there are many key elements to fulfill in order to get it up and running. We came up with the following development plan and timeline.
@@ -104,20 +104,18 @@ Our project involves building a website and there are many key elements to fulfi
 ![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/4415317c-2fa9-49be-b395-97991580fdf1)
 
 Project Development Plan Table
-
-
-
+<\br><\br>
 
 Since we are both completely new to web development, we decided to learn and do it the most fundamental way. We used very little frameworks (less ReactJS) to aid our project so we can get comfortable with web development using basic HTML/CSS/Javascript.
 
-
+<\br>
 **TIMELINE**
 
 
 ![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/67edfdd1-a7a5-478d-86cb-2d0f5ff3acba)
 
 Project Timeline Plan Table
-
+<\br><\br>
 
 
 
@@ -133,7 +131,7 @@ When the website is opened, the user will be greeted with a log in screen. If th
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/acfd62aa-62f9-46cf-970a-10bec1f34788)
 
 Log In Form and Register Form
-
+<\br><\br>
 
 
 [For new users] Users will have to input a username, name, email and password, they also have an option to include a profile picture, by selecting the “Add an Avatar” button. Upon filling the form and clicking “Register”, users will receive a confirmation email of their registered email. To allow the new account to be activated, they have to verify their email address by clicking on the link in the email. Once completed, they can log in.
@@ -141,7 +139,7 @@ Log In Form and Register Form
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/643f7dac-f07c-4973-ada6-285d521fd23f)
 
 Email of Confirmation Link
-
+<\br><\br>
 
 
 
@@ -155,7 +153,7 @@ Create Post, buttons: Chats, Home). On the right, there is a logout button which
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/959b6492-3cd3-4bc4-b52a-bab27c74871b)
 
 Navigation Bar (on Homepage)
-
+<\br><\br>
 
 
 
@@ -167,7 +165,7 @@ Users can view project listings in the Homepage. Each project listing is display
 
 Example of Project Listings
 
-
+<\br><\br>
 
 
 *Searchbox for Project Listings*
@@ -177,7 +175,7 @@ Users can use the searchbox in the homepage to search for projects they might be
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/f0506f31-4d0b-4f57-9423-e148b604f226)
 
 Searchbox for Project Listings
-
+<\br><\br>
 
 
 
@@ -190,7 +188,7 @@ fields contain the Title, Description and Skills required. After clicking on pub
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/2f0f3112-e982-4781-a3c6-545143204e74)
 
 Create a Project Post Form
-
+<\br><\br>
 
 
 
@@ -206,7 +204,7 @@ have the relevant skills they need for their project.
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/ce7940e0-44b4-4a1d-be62-95072d677a46)
 
 User Profile Page
-
+<\br><\br>
 
 
 
@@ -228,7 +226,7 @@ can input their message in the input box below and even include an attachment by
 ![image](https://github.com/Vavinan/collab-test/assets/110589924/de24ba0d-0bae-44ba-a753-e9d60279d66f)
 
 Chat Page
-
+<\br><\br>
 
 
 
@@ -238,7 +236,7 @@ Futhermore, users can view the bio of the user they are talking to, by clicking 
 
 Chat User Show Bio
 
-
+<\br><\br><\br>
 
 
 **SOFTWARE ENGINEERING RELATED INFORMATION**
@@ -259,12 +257,12 @@ join and communicate. However, we realised that this is not needed as the purpos
 
 future on whether such feature is really a need.
 
-
+<\br>
 
 *SOFTWARE DESIGN PATTERNS*
 
 Observer Pattern - We allow changes to the user’s bio, so any single user can change his/her bio anytime. When the bio is changed, other users should be able to view the change in the “show bio” button in chat page.
-
+<\br>
 **TESTING**
 
 *Regression Testing* - Once a new feature is created, we ensured that we test out the feature and other features, to check if there is any function that is being compromised. This was especially important as it allows us to detect issues with the code early.
