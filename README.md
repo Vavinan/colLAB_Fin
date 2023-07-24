@@ -34,7 +34,7 @@ TESTING ………………………………………………………………
 ***Level of Achievement: Gemini***
 
 *Members: Jeevanandham Vavinan [A0253526E] and Isaac Eng Hong Yeow [A0253005W]*
-</br>
+</br></br>
 
 **Resources (links):**
 
@@ -47,7 +47,7 @@ Poster: https://drive.google.com/file/d/1ElH3_Ah2UszAgLR6nqC42FOuFNQCA3x0/view?u
 Video: https://vimeo.com/847759082?share=copy 
 
 Website: https://collab-alpha.vercel.app/
-</br>
+</br></br>
 
 **Project Scope:**
 Our project aims to provide a web platform that connects students with similar interests and project ideas, allowing them to form effective teams to achieve it.
