@@ -105,7 +105,7 @@ Our project involves building a website and there are many key elements to fulfi
 
 ![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/4415317c-2fa9-49be-b395-97991580fdf1)
 
-<u>Project Development Plan Table</u>
+<u>Project Development Plan Table <\u>
 </br></br>
 
 Since we are both completely new to web development, we decided to learn and do it the most fundamental way. We used very little frameworks (less ReactJS) to aid our project so we can get comfortable with web development using basic HTML/CSS/Javascript.
