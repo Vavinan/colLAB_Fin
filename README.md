@@ -12,7 +12,10 @@ Jeevanandham Vavinan
 
 Isaac Eng
 </br></br></br></br>
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------
+
 **CONTENT PAGE**
 
 INTRODUCTION ……………………………………………………………………………………………………………… 3
@@ -263,7 +266,7 @@ future on whether such feature is really a need.
 *SOFTWARE DESIGN PATTERNS*
 
 Observer Pattern - We allow changes to the user’s bio, so any single user can change his/her bio anytime. When the bio is changed, other users should be able to view the change in the “show bio” button in chat page.
-</br>
+</br> </br> </br>
 **TESTING**
 
 *Regression Testing* - Once a new feature is created, we ensured that we test out the feature and other features, to check if there is any function that is being compromised. This was especially important as it allows us to detect issues with the code early.
