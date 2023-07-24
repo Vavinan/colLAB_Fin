@@ -81,52 +81,53 @@ website.
 
 
 Project Deliverables:
+
 To better understand what our website would offer, here are some user stories on how the users can utilise our website.
+
+
 User Stories:
-As a student with a project idea, I want to find team members who share my interests and can contribute their skills to the project.
-As a student seeking a project team, I want to browse a platform that lists out projects based on my interests and skills.
-As a student with a project idea/seeking a project team, I want to be able to communicate with my potential project partners.
+
+1. As a student with a project idea, I want to find team members who share my interests and can contribute their skills to the project.
+
+2. As a student seeking a project team, I want to browse a platform that lists out projects based on my interests and skills.
+
+3. As a student with a project idea/seeking a project team, I want to be able to communicate with my potential project partners.
+
 
 Tech Stack:
-HTML
-CSS
-Javascript
-ReactJS
-Firebase (Database)
-PLANNING
+      # HTML
+      # CSS
+      # Javascript
+      # ReactJS
+      # Firebase (Database)
+      # PLANNING
 
 PROJECT DEVELOPMENT PLAN
+
 Our project involves building a website and there are many key elements to fulfill in order to get it up and running. We came up with the following development plan and timeline.
-PROJECT DEVELOPMENT PLAN
-TASK	PERSON
-BASIC HTML/CSS OF WEBSITE	VAVINAN
-BASIC FEATURES USING JAVASCRIPT	VAVINAN
-HTML UPDATES	ISAAC
-ADVANCED FEATURES USING JAVASCRIPT	VAVINAN
-OVERALL WEB DESIGN/CSS UPDATES	ISAAC
-WEBSITE HOSTING	VAVINAN
 
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/4415317c-2fa9-49be-b395-97991580fdf1)
 
 Project Development Plan Table
-Since we are both completely new to web development, we decided to learn and do it the most fundamental way. We used very little frameworks (less ReactJS) to aid our project so we can get comfortable with web development using basic HTML/CSS/Javascript.
+
+
+Since we are both completely new to web development, we decided to learn and do it the most fundamental way. We used very little frameworks (less ReactJS) to aid our project so we can get 
+
+comfortable with web development using basic HTML/CSS/Javascript.
+
+
 TIMELINE
 
-PROJECT TIMELINE PLAN
-TASK	TARGET:
-DECIDE ON WEBSITE FEATURES	MID MAY
-BASIC HTML/CSS OF WEBSITE	MID MAY
-BASIC FEATURES DEVELOPMENT	EARLY JUNE
-DECIDE ON WEBSITE DESIGN	MID JUNE
-ADVANCED FEATURES DEVELOPMENT	END JUNE
-WEBSITE DESIGN (CSS)	MID JULY
-USER TESTING	MID JULY
-FINAL PROTOTYPE	MID JULY
-WEBSITE HOSTING	MID JULY
 
+![image](https://github.com/Vavinan/colLAB_Fin/assets/110589924/67edfdd1-a7a5-478d-86cb-2d0f5ff3acba)
 
 Project Timeline Plan Table
+
+
 CORE FEATURES
+
 In order to ensure that our user stories come true, we have developed the following core features.
+
 Account Login/Register
 
 
