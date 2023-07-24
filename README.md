@@ -29,24 +29,56 @@ TESTING ………………………………………………………………
 INTRODUCTION
 
 Project Name: colLAB
+
 Level of Achievement: Gemini
+
 Members: Jeevanandham Vavinan [A0253526E] and Isaac Eng Hong Yeow [A0253005W]
+
 Resources (links):
+
 README: https://docs.google.com/document/d/1Ob-i8ObSaV8LG8X8q_dhs5m8n1mydT5oBp-V1o_nLLw/edit?usp=sharing 
+
 Log: https://docs.google.com/spreadsheets/d/1JcaQKGxFl1Jkp5MtqesL5XxYCOTklwvaUtm6KRnZ-WU/edit#gid=0 
+
 Poster: https://drive.google.com/file/d/1ElH3_Ah2UszAgLR6nqC42FOuFNQCA3x0/view?usp=drive_link 
+
 Video: https://vimeo.com/847759082?share=copy 
+
 Website: https://collab-alpha.vercel.app/
 
 Project Scope:
 Our project aims to provide a web platform that connects students with similar interests and project ideas, allowing them to form effective teams to achieve it.
-Our project will be an open-source website where users can view project listings, listed by other users that want to work on a project idea and are looking for potential collaborators, on the website and join the projects they are interested in.
-We are targetting polytechnic/university students as most of them tend to be equipped with technical skills such as programming, engineering and design skills, which are huge contributing factors towards projects. Students of such groups also tend to be more adventurous and may have plenty of project ideas that they would like to work on.
-ColLAB’s main mission is to connect potential project collaborators with those who have project ideas. Our platform will allows them to find one another so that they can start working on the project.
+
+Our project will be an open-source website where users can view project listings, listed by other users that want to work on a project idea and are looking for potential collaborators, on the 
+
+website and join the projects they are interested in.
+
+
+We are targetting polytechnic/university students as most of them tend to be equipped with technical skills such as programming, engineering and design skills, which are huge contributing factors
+
+towards projects. Students of such groups also tend to be more adventurous and may have plenty of project ideas that they would like to work on.
+
+ColLAB’s main mission is to connect potential project collaborators with those who have project ideas. Our platform will allows them to find one another so that they can start working on the 
+
+project.
+
 
 Problem Motivation:
-Many students have great project ideas but lack the necessary team members to see it through. Although they may seek assistance from their friends or classmates, finding a dependable and like-minded team member can be difficult, especially if the project requires certain skill sets. Even posting on popular platforms, like Reddit, can be troublesome,  time-consuming and inefficient. Thus, their idea would go to waste. Why don't institutions have a platform that allows students, with project ideas, to find like-minded individuals that could collaborate on the project, in order to make the idea come true?
-That is why we decided to work on this project, “ColLAB”. With ColLAB, students are able to find potential project partners efficiently and find projects to work on to expand their experiences. In turn, there would be more projects initiated as students will find it easy to find project partners and hence initiate projects. There would really be many advantages with the usage of this website.
+
+Many students have great project ideas but lack the necessary team members to see it through. Although they may seek assistance from their friends or classmates, finding a dependable and like-
+
+minded team member can be difficult, especially if the project requires certain skill sets. Even posting on popular platforms, like Reddit, can be troublesome,  time-consuming and inefficient. 
+
+Thus, their idea would go to waste. Why don't institutions have a platform that allows students, with project ideas, to find like-minded individuals that could collaborate on the project, in 
+
+order to make the idea come true?
+
+That is why we decided to work on this project, “ColLAB”. With ColLAB, students are able to find potential project partners efficiently and find projects to work on to expand their experiences. 
+
+In turn, there would be more projects initiated as students will find it easy to find project partners and hence initiate projects. There would really be many advantages with the usage of this 
+
+website.
+
 
 Project Deliverables:
 To better understand what our website would offer, here are some user stories on how the users can utilise our website.
