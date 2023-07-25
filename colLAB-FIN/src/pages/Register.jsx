@@ -137,7 +137,7 @@ export const Register = () => {
           {pictureAttached && <span>Picture attached successfully!</span>}
           <label className="profile-pic-button" htmlFor="file">
             <div className="profile-pic-container">
-               <img className="profile-pic-icon" src="src/images/add.png"/>
+              {!pictureAttached && <img className="profile-pic-icon" src="/add.png"/>}
               {!pictureAttached && <span className="profile-pic-caption">Add an avatar</span>}
             </div>
           </label>
