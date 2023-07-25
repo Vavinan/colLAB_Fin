@@ -157,28 +157,36 @@ const Bio = () => {
 
         <p className='profile-username'>@{userName}</p> 
 
+        <div className='editable-box'>
+        <p className='editable-text'>*Change Email/Password:</p>
           <input
-            className='profile-password'
+            className='editable-input-fields'
             type="password"
             value={currentPassword}
             onChange={(e) => setCurrentPassword(e.target.value)}
             placeholder="Enter current password"
           />
           <input
-            className='profile-new-email'
+            className='editable-input-fields'
             type="email"
             value={newEmail}
             onChange={(e) => setNewEmail(e.target.value)}
             placeholder="Enter new email"
           />
           <input
-            className='profile-new-password'
+            className='editable-input-fields'
             type="password"
             value={editablePassword}
             onChange={(e) => setEditablePassword(e.target.value)}
             placeholder="Enter new password"
           />
+
         </div>
+        
+        </div>
+        <button className='save-password-button' onClick={saveEmailAndPassword}>
+            Save Email & Password
+          </button>
       </div>
       <div className='bio-container'>
         <p className='bio'>Bio:</p>
@@ -187,7 +195,7 @@ const Bio = () => {
             <div>
               <span className='input-filler'>Education Level:</span>
               <input
-                className='input-school'
+                className='input-stuff-box'
                 type="text"
                 value={eduLevel || ''}
                 onChange={(e) => setEduLevel(e.target.value)}
@@ -197,7 +205,7 @@ const Bio = () => {
             <div>
               <span className='input-filler'>Course of Study:</span>
               <input
-                className='input-school'
+                className='input-stuff-box'
                 type="text"
                 value={courseOfStudy || ''}
                 onChange={(e) => setCourseOfStudy(e.target.value)}
@@ -207,7 +215,7 @@ const Bio = () => {
             <div>
               <span className='input-filler'>School: </span>
               <input
-                className='input-school'
+                className='input-stuff-box'
                 type="text"
                 value={school || ''}
                 onChange={(e) => setSchool(e.target.value)}
@@ -225,9 +233,7 @@ const Bio = () => {
           ></textarea>
         </div>
         <div className='button-div'>
-          <button className='save-button' onClick={saveEmailAndPassword}>
-            Save Email & Password
-          </button>
+          
           <button className='save-button' onClick={saveBioData}>
             Save Bio Data
           </button>

@@ -56,6 +56,7 @@
   border:solid darkslategray 2px;
   color:lightgray;
   width: 100%;
+  padding-left: 5px;
 }
 
 .chat-searchbar:focus {
@@ -641,6 +642,12 @@ body {
   color: red;
 }
 
+.verification-email {
+  color:white;
+  background-color: #128c7e;
+  font-weight: bold;
+}
+
 /* REGISTER PAGE (END) */
 
 /* HOME PAGE (START) */
@@ -757,6 +764,8 @@ body {
   flex-direction: column;
 }
 
+
+
 .profile-page-container .profile-container .profile-details .profile-name {
   font-size: 30px;
   font-weight: bold;
@@ -808,6 +817,15 @@ body {
 .profile-page-container .bio-container .profile-bio-container .skills-container {
   margin-top: 15px;
   margin-bottom: 15px;
+  background-color: white;
+  color: teal;
+  border:2px solid #0f3530;
+  border-radius: 10px;
+  padding-left: 5px;
+}
+
+.skils-container::placeholder {
+  color:lightgray
 }
 
 .profile-page-container .bio-container .profile-bio-container .bio-school {
@@ -850,17 +868,86 @@ body {
   border-radius: 5px;
   background-color: #075e54;
   color: white;
-  font-size: 22px;
+  font-size: 16px;
   font-family: Roboto, Arial;
   font-weight: bold;
-  width: 120px;
+  height:50px;
+  width:160px;
   border:none;
   transition: 0.3s;
   opacity:0.8;
 }
+
+.editable-box {
+  width:400px;
+  margin-top:30px;
+  font-style: italic;
+  font-weight: 600;
+  color: rgba(255,0,0,1);
+  margin-bottom: 20px;
+  
+}
+
+.editable-text {
+  background-color: #128c7e;
+  width: fit-content;
+}
+
+.editable-input-fields {
+  background-color: #426f69;
+  border:white solid 2px;
+  border-radius: 10px;
+  color:white;
+  padding-left: 5px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.editable-input-fields::placeholder {
+  color: lightgray;
+}
+
+.input-stuff-box {
+  background-color: white;
+  color: teal;
+  border:2px solid #0f3530;
+  border-radius: 10px;
+  padding-left:5px;
+}
+
+.input-stuff-box::placeholder{
+  color: lightgray;
+}
+
+.save-password-button {
+  border-radius: 5px;
+  background-color: #075e54;
+  color: white;
+  font-size: 16px;
+  font-family: Roboto, Arial;
+  font-weight: bold;
+  border:none;
+  transition: 0.3s;
+  opacity:0.8;
+  margin-left: 100px;
+  height:50px;
+  width:200px;
+  vertical-align: middle;
+  margin-top:100px;
+
+}
+.save-password-button:hover {
+  opacity:1;
+  width:205px;
+  height:55px;
+}
 .profile-page-container .bio-container .save-button:hover {
   opacity:1;
+  width:165px;
+  height:55;
 }
+
+
 
 /* PROFILE PAGE (END) */
 
@@ -984,7 +1071,25 @@ body {
   color:white;
 }
 
+.edit-button {
+  font-size: 15px;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.523);
+  border-radius: 10px;
+  border:2px solid lightgray;
+  font-weight: 400;
+  
+  transition: 0.3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
+.edit-button:hover {
+  background-color: white;
+  color: #119283c2;
+  font-weight: 700;
+  text-decoration: underline;
+}
 
 .delete-button {
   position: absolute;
@@ -995,7 +1100,7 @@ body {
   left:1210px;
   top:15px;
   border:none;
-  background-color: rgba(255,0,0,0.6);
+  background-color: rgb(189, 7, 7);
   transition: 0.3;
   color:white;
 }

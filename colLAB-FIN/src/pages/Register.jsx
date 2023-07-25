@@ -146,7 +146,7 @@ export const Register = () => {
           
           <button className="register-button">Register</button>
           {err && <span className="error-msg">*Something went wrong</span>}
-          {verification && <span>A verification email has been sent to your email address. Please verify your email before logging in.</span>}
+          {verification && <span className='verification-email'>A verification email has been sent to your email address. Please verify your email before logging in.</span>}
 
         </form>
         <p>Already have an account? <Link to="/login"> LOGIN</Link></p>
