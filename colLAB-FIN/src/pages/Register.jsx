@@ -15,6 +15,7 @@ export const Register = () => {
   const [username,setUsername] = useState("");
   const [myName,setMyName] = useState("");
   const [nameExists,setNameExists] = useState(false)
+  const [pictureAttached, setPictureAttached] = useState(false);
 
   const handleKey = async () =>{
     const q = query (
@@ -91,7 +92,7 @@ export const Register = () => {
             }
           }, 1 * 60 * 1000); // 1 minute
         
-
+           setPictureAttached(true)
           });
         }
       );
@@ -132,11 +133,12 @@ export const Register = () => {
           <input type="text" placeholder = "Name" />
           <input type="email" placeholder="Email" />
           <input type="Password" placeholder="password" />
-          <input style={{ display: "none" }} type="file" id="file" />
+          <input style={{ display: "none" }} type="file" id="file"  onChange={() => setPictureAttached(true)} />
+          {pictureAttached && <span>Picture attached successfully!</span>}
           <label className="profile-pic-button" htmlFor="file">
             <div className="profile-pic-container">
-              <img className="profile-pic-icon" src="src/images/add.png"/>
-              <span className="profile-pic-caption">Add an avatar</span>
+              {!pictureAttached && <img className="profile-pic-icon" src="src/images/add.png"/>}
+              {!pictureAttached && <span className="profile-pic-caption">Add an avatar</span>}
             </div>
           </label>
 
