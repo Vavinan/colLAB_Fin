@@ -34,7 +34,7 @@ const Chat = () => {
       </div>   
 
         {data.showInput && 
-        <button class='show-bio-btn' onClick={toggleBioPopup}>Open Bio</button>}
+        <button className='show-bio-btn' onClick={toggleBioPopup}>Open Bio</button>}
         {/* <div className="chatIcons">
         <img src={cam}/>
           <img src={addicon}/>

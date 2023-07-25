@@ -1,7 +1,10 @@
 import { initializeApp } from "firebase/app";
-import {getAuth,GoogleAuthProvider} from "firebase/auth";
+import {getAuth,GoogleAuthProvider, EmailAuthProvider} from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import {getStorage} from "firebase/storage"
+import { doc, getDoc } from 'firebase/firestore';
+import { reauthenticateWithCredential,reauthenticateWithPopup } from 'firebase/auth';
+
 const firebaseConfig = {
   apiKey: "AIzaSyCouaKIjh5aWsSpQH0a5cd_8Z9ENikwxjc",
   authDomain: "fir-chat-app-2a0d7.firebaseapp.com",
@@ -17,4 +20,21 @@ export const auth = getAuth();
 export const storage = getStorage();
 export const db = getFirestore();
 export const Google = new GoogleAuthProvider();
+export {EmailAuthProvider};
+export const getUserDataFromFirestore = async (userId) => {
+  try {
+    const docRef = doc(db, 'users', userId);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      return docSnap.data();
+    } else {
+      console.error('User document not found.');
+      return null;
+    }
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+    return null;
+  }
+};
 

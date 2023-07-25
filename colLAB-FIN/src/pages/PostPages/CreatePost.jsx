@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import {addDoc,collection} from 'firebase/firestore'
+import {addDoc,collection, doc, updateDoc} from 'firebase/firestore'
 import { auth,db } from '../../firebase'
 import { useNavigate } from 'react-router-dom'
 import "./postcss.css";
-const CreatePost = ( {onPostSuccess}) => {
+const CreatePost = ( {onPostSuccess,selectedPost}) => {
 
   const [title,setTitle] = useState("");
   const[postContent,setPostContent]=useState("");
@@ -15,7 +15,16 @@ const CreatePost = ( {onPostSuccess}) => {
     if(!auth.currentUser){
      navigate("/login");
     }
-   },[navigate]);
+    if (selectedPost) {
+      setTitle(selectedPost.title);
+      setPostContent(selectedPost.postContent);
+      setSkills(selectedPost.skills);
+    } else{
+      setTitle("");
+      setPostContent("");
+      setSkills("");
+    }
+   },[selectedPost,navigate]);
 
   const postsCollectionRef=collection(db,"posts");
 
@@ -24,20 +33,33 @@ const CreatePost = ( {onPostSuccess}) => {
       alert('Fill up the fields');
     } else{
         try {
-          await addDoc(postsCollectionRef,{
-            title:title,
-            postContent: postContent,
-            skills:skills,
-           // contact:contact,
-           contact:auth.currentUser.displayName,
+          if (selectedPost) {
+            // If there is a selectedPost, update the existing post
+            const docRef = doc(db, 'posts', selectedPost.id);
+            await updateDoc(docRef, {
+              title: title,
+              postContent: postContent,
+              skills: skills,
 
-            author :{
+              //...
+            });
+          } else {
+            // If there is no selectedPost, create a new post
+            await addDoc(postsCollectionRef, {
+              title: title,
+              postContent: postContent,
+              skills: skills,
+              contact:auth.currentUser.displayName,
+
+              author :{
               name:auth.currentUser.displayName,
               id:auth.currentUser.uid,
              
             } 
-          })
-
+              //...
+            });
+          } 
+          
           //navigate("/");
           onPostSuccess();
 
@@ -51,19 +73,19 @@ const CreatePost = ( {onPostSuccess}) => {
   return (
     <div className="createPost-container">
       <div className="postForm">
-        <h1 className="createPost-heading">Create a Project Post</h1>
+        <h1 className="createPost-heading"> {selectedPost ? 'Edit the Project Post' : 'Create a Project Post'}</h1>
 
       <div className="createPost-split-container">
          
          <div className="split-container">   {/* left container */}
             <div  className="mb-3">
             <label htmlFor="title" className="form-label"> Title:</label>
-            <input type="text" placeholder='Project Title' className='form-control' onChange={(e)=>setTitle(e.target.value)} />
+            <input type="text" placeholder='Project Title' value={title} className='form-control' onChange={(e)=>setTitle(e.target.value)} />
             </div>
 
             <div  className="mb-3">
             <label htmlFor="tags" className="form-label"  >Skills Required:</label>
-              <textarea placeholder='Technical Skills needed for your project...' className='form-control' onChange={(e)=>setSkills(e.target.value)}></textarea>
+              <textarea placeholder='Technical Skills needed for your project...' value={skills} className='form-control' onChange={(e)=>setSkills(e.target.value)}></textarea>
               </div>
 
             
@@ -72,7 +94,7 @@ const CreatePost = ( {onPostSuccess}) => {
           <div className="split-container">   {/* right container */}            
           <div  className="mb-3">
             <label htmlFor="posts" className="form-label"  >Description:</label>
-              <textarea rows="8" placeholder='Elaborate on your idea!' className='form-control' onChange={(e)=>setPostContent(e.target.value)}></textarea>
+              <textarea rows="8" placeholder='Elaborate on your idea!' value={postContent} className='form-control' onChange={(e)=>setPostContent(e.target.value)}></textarea>
             </div>
 
               {/*<div className="mb-3">
@@ -85,7 +107,7 @@ const CreatePost = ( {onPostSuccess}) => {
 
       </div>
       <div className='publish-container'>
-        <button className="publish-button" onClick={submitPost} >PUBLISH</button> 
+        <button className="publish-button" onClick={submitPost} >{selectedPost ? 'Update' : 'PUBLISH'}</button> 
 
       </div>
         

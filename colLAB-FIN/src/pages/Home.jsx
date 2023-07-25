@@ -1,4 +1,4 @@
-import React, { useState , useContext} from 'react';
+import React, { useState , useContext, useEffect} from 'react';
 import Sidebar from '../components/Sidebar';
 import Chat from '../components/Chat';
 import Posts from './Posts';
@@ -7,13 +7,14 @@ import Bio from './PostPages/Bio';
 import Navbar from '../components/Navbar';
 import { auth } from '../firebase';
 import { AuthContext } from '../context/AuthContext';
-
+import { getUserDataFromFirestore } from '../firebase'; 
 
 export const Home = () => {
   const [showPosts, setShowPosts] = useState(true);
   const [isPostsPage, setIsPostsPage] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
   const [showBio,setShowBio] = useState(false);
+  const [selectedPost, setSelectedPost] = useState(null);
 
   const handleShowPosts = () => {
     setShowPosts(!showPosts);
@@ -23,8 +24,10 @@ export const Home = () => {
   };
 
   const handleCreatePost = () => {
+    setSelectedPost(null);
     setShowCreate(!showCreate);
     setShowBio(false);
+    //setShowPosts(!showPosts);
    
   };
   const handleShowBio = () => {
@@ -38,6 +41,13 @@ export const Home = () => {
     setIsPostsPage(true);
     setShowCreate(false);
     setShowBio(false);
+    setSelectedPost(null);
+  };
+  const handleEditPost = (post) => {
+    setSelectedPost(post);
+    setShowCreate(true);
+    setShowBio(false);
+    setShowPosts(true);
   };
 
   const handleSignOut = () => {
@@ -53,8 +63,19 @@ export const Home = () => {
   };
 
   const { currentUser } = useContext(AuthContext);
+  const [userDisplayName, setUserDisplayName] = useState('');
+  useEffect (() => {
+    const fetchUserData = async () => {
+      if (currentUser && currentUser.uid) {
+        const userData = await getUserDataFromFirestore(currentUser.uid);
+        if (userData && userData.displayName) {
+          setUserDisplayName(userData.displayName);
+        }
+      }
+    };
 
-  
+    fetchUserData();
+  }, [currentUser]);
 
 
 
@@ -66,7 +87,7 @@ export const Home = () => {
         <div className='left-top-navigation-bar'>
            {/* <img className="collab-logo" src="src/images/ColLAB.png"></img>  */}
            <img className="collab-logo" src="/ColLAB.png"></img>
-          <div className='greeting-text'>Hello, {currentUser.displayName}!</div>      
+          <div className='greeting-text'>Hello, {userDisplayName}!</div>      
         </div>
         
         <div className="center-top-navigation-bar">
@@ -95,13 +116,13 @@ export const Home = () => {
     
       
       <div className="chatpage-container">
-        {!showPosts && !showBio && <Sidebar />}
-        {!showPosts && !showBio && <Chat />}
+        {!showPosts && !showCreate && !showBio && <Sidebar />}
+        {!showPosts && !showCreate && !showBio && <Chat />}
         {showPosts ? (
           showCreate ? (
-            <CreatePost onPostSuccess={handlePostSuccess} />
+            <CreatePost onPostSuccess={handlePostSuccess}  selectedPost={selectedPost} />
           ) : (
-            <Posts isAuth={true} handleShowPosts={handleShowPosts}/>
+            <Posts isAuth={true} handleShowPosts={handleShowPosts}  handleEditPost={handleEditPost} />
           )
         ) : null }
         {showBio && <Bio />} {/* Display the Bio page when showBio state is true */}

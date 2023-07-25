@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import {db} from "../firebase"
-import { collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, updateDoc, where,orderBy } from 'firebase/firestore';
 import {AuthContext} from "../context/AuthContext"
 import { ChatContext } from '../context/ChatContext';
 
@@ -11,21 +11,51 @@ const Search = () => {
    const [err,setErr] = useState(false);
    const {currentUser} = useContext(AuthContext);
    const { dispatch } = useContext(ChatContext);
-   const handleSearch = async () =>{
-   const q = query(
-    collection(db,"users"),
-    where("displayName","==",username) 
+   const handleSearch = async () => {
+    if (!username) {
+      setUser(null);
+      setErr(false);
+      return;
+    }
+  
+    const q = query(
+      collection(db, "users"),
+      orderBy("displayName")
     );
-
+  
     try {
       const querySnapshot = await getDocs(q);
-      querySnapshot.forEach((doc) =>{
-        setUser(doc.data())
+      let closestUser = null;
+  
+      // Create a case-insensitive regular expression from the search term
+      const searchTermRegex = new RegExp(username, "i");
+  
+      querySnapshot.forEach((doc) => {
+        const userData = doc.data();
+        const displayName = userData.displayName;
+  
+        if (searchTermRegex.test(displayName)) {
+          if (!closestUser || displayName.length < closestUser.displayName.length) {
+            closestUser = {
+              ...userData,
+            };
+          }
+        }
       });
-    } catch(err){
+  
+      if (closestUser) {
+        setUser(closestUser);
+        setErr(false);
+      } else {
         setErr(true);
+        setUser(null);
+      }
+    } catch (err) {
+      setErr(true);
+      setUser(null);
     }
-   };
+  };
+  
 
    const handleKey = e=>{
     e.code == "Enter" && handleSearch();
@@ -103,7 +133,7 @@ const Search = () => {
   )
 }
 
-export default Search
+export default Search;
 
 
 
