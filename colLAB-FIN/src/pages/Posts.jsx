@@ -6,7 +6,7 @@ import SearchBar from "./PostPages/Searchbar";
 import Fuse from "fuse.js";
 import "./PostPages/postcss.css";
 
-const Posts = ({ isAuth, handleShowPosts,handleEditPost}) => {
+const Posts = ({ isAuth, handleShowPosts, handleEditPost }) => {
   const [postLists, setPostLists] = useState([]);
   const [loading, setLoading] = useState(false);
   const [expandedPosts, setExpandedPosts] = useState([]);
@@ -92,8 +92,7 @@ const Posts = ({ isAuth, handleShowPosts,handleEditPost}) => {
   }, [selectedAuthor]);
 
   const openChatWindow = (author) => {
-    // Logic to open the chat window with the selected author
-    // You can implement your own code here to open the chat window or perform any other desired action.
+
     console.log(`Opening chat window with ${author}`);
     if (typeof handleShowPosts === "function") {
       handleShowPosts();
@@ -117,109 +116,99 @@ const Posts = ({ isAuth, handleShowPosts,handleEditPost}) => {
     <>
 
       <div className="homepage">
-      <div className="homepage-design">
-        <p className="homepage-caption">Start Collaborating TODAY!</p>
-      <div className="search-bar col-lg-6 offset-lg-3">
-            <SearchBar onSearch={handleSearch}/>
-        </div>
-      </div>
-      
-        {/*  <Search handleSelect={handleSelect} /> */}
-
-        
-          
-          <div className="homepage-posts-container">
-            {filteredPosts.length === 0 ? (
-              <h3>No post found.</h3>
-            ) : (
-              filteredPosts.map((post) => {
-                const content = isPostExpanded(post.id)
-                  ? post.postContent
-                  : post.postContent.slice(0, 300);
-                const shouldShowButton = post.postContent.length > 300;
-
-                return (
-                  <div key={post.id} className="card mb-4 ml-10 mr-10 border-0 shadow color:">
-                    <div className="card-body">
-                    {isAuth &&
-                        auth.currentUser &&
-                        post.author.id === auth.currentUser.uid && (
-                          
-                          <>
-                    <button
-                      className="edit-button"
-                      onClick={() => {
-                        handleEdit(post); // Pass the post data to edit
-                      }}
-                    >
-                      Edit Post
-                    </button>
-                    <button
-                      className="delete-button"
-                      onClick={() => {
-                        deletePost(post.id);
-                      }}
-                    >
-                      Delete Post
-                    </button>
-                  </>
-                          
-                        )}
-                      
-                      <h5 className="card-title mb-3 fw-bold">{post.title} </h5>
-                      <p className="card-text mb-3">
-                        <strong>Description:</strong> {content}
-                        {shouldShowButton && (
-                          <button
-                            className="readmore-btn"
-                            onClick={() => toggleExpand(post.id)}
-                          >
-                            {isPostExpanded(post.id)
-                              ? "Read less"
-                              : "...Read more"}
-                          </button>
-                        )}
-                      </p>
-                      {post.skills && (
-                        <div className="skills-container">
-                          <h6><strong>Skills Required:</strong> {post.skills}</h6>
-                        </div>
-                      )}
-                      <span className="created-by">
-                        Created By: 
-                      </span>
-
-                      {post.author.name && (
-                        <span
-                          className="badge rounded-pill"
-                          onClick={() => handleSelect(post.author.name)}
-                          style={{ cursor: "pointer" }}
-                        >
-                          {post.author.name}
-                        </span>
-                      )}
-                    </div>
-
-                    
-                  </div>
-                );
-              })
-            )}
+        <div className="homepage-design">
+          <p className="homepage-caption">Start Collaborating TODAY!</p>
+          <div className="search-bar col-lg-6 offset-lg-3">
+            <SearchBar onSearch={handleSearch} />
           </div>
-        
+        </div>
+        <div className="homepage-posts-container">
+          {filteredPosts.length === 0 ? (
+            <h3>No post found.</h3>
+          ) : (
+            filteredPosts.map((post) => {
+              const content = isPostExpanded(post.id)
+                ? post.postContent
+                : post.postContent.slice(0, 300);
+              const shouldShowButton = post.postContent.length > 300;
 
-        
+              return (
+                <div key={post.id} className="card mb-4 ml-10 mr-10 border-0 shadow color:">
+                  <div className="card-body">
+                    {isAuth &&
+                      auth.currentUser &&
+                      post.author.id === auth.currentUser.uid && (
+
+                        <>
+                          <button
+                            className="edit-button"
+                            onClick={() => {
+                              handleEdit(post); // Pass the post data to edit
+                            }}
+                          >
+                            Edit Post
+                          </button>
+                          <button
+                            className="delete-button"
+                            onClick={() => {
+                              deletePost(post.id);
+                            }}
+                          >
+                            Delete Post
+                          </button>
+                        </>
+
+                      )}
+
+                    <h5 className="card-title mb-3 fw-bold">{post.title} </h5>
+                    <p className="card-text mb-3">
+                      <strong>Description:</strong> {content}
+                      {shouldShowButton && (
+                        <button
+                          className="readmore-btn"
+                          onClick={() => toggleExpand(post.id)}
+                        >
+                          {isPostExpanded(post.id)
+                            ? "Read less"
+                            : "...Read more"}
+                        </button>
+                      )}
+                    </p>
+                    {post.skills && (
+                      <div className="skills-container">
+                        <h6><strong>Skills Required:</strong> {post.skills}</h6>
+                      </div>
+                    )}
+                    <span className="created-by">
+                      Created By:
+                    </span>
+
+                    {post.author.name && (
+                      <span
+                        className="badge rounded-pill"
+                        onClick={() => handleSelect(post.author.name)}
+                        style={{ cursor: "pointer" }}
+                      >
+                        {post.author.name}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              );
+            })
+          )}
+        </div>
       </div>
 
       {showCreate && (
-      <CreatePost
-        onPostSuccess={() => {
-          setShowCreate(false);
-          setSelectedPost(null); // Reset the selected post after successful edit or new post
-        }}
-        selectedPost={selectedPost} // Pass the selected post data to CreatePost
-      />
-    )}
+        <CreatePost
+          onPostSuccess={() => {
+            setShowCreate(false);
+            setSelectedPost(null); // Reset the selected post after successful edit or new post
+          }}
+          selectedPost={selectedPost} // Pass the selected post data to CreatePost
+        />
+      )}
     </>
   );
 };

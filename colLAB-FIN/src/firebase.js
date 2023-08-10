@@ -1,10 +1,8 @@
 import { initializeApp } from "firebase/app";
-import {getAuth,GoogleAuthProvider, EmailAuthProvider} from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-import {getStorage} from "firebase/storage"
-import { doc, getDoc } from 'firebase/firestore';
-import { reauthenticateWithCredential,reauthenticateWithPopup } from 'firebase/auth';
-
+import { getAuth, GoogleAuthProvider, EmailAuthProvider, sendEmailVerification } from "firebase/auth";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { getStorage } from "firebase/storage"
+import { reauthenticateWithCredential, reauthenticateWithPopup } from 'firebase/auth';
 const firebaseConfig = {
   apiKey: "AIzaSyCouaKIjh5aWsSpQH0a5cd_8Z9ENikwxjc",
   authDomain: "fir-chat-app-2a0d7.firebaseapp.com",
@@ -20,7 +18,7 @@ export const auth = getAuth();
 export const storage = getStorage();
 export const db = getFirestore();
 export const Google = new GoogleAuthProvider();
-export {EmailAuthProvider};
+export { EmailAuthProvider, sendEmailVerification };
 export const getUserDataFromFirestore = async (userId) => {
   try {
     const docRef = doc(db, 'users', userId);

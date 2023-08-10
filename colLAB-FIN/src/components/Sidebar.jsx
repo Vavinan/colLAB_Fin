@@ -4,14 +4,14 @@ import Search from "./Search"
 import Chats from "./Chats"
 
 const Sidebar = () => {
-  return (
-      <div className="sidebar"> 
-         <Navbar/>   {/*CHATS Wording */}
-         <Search/>   {/*Search bar for chats*/}
-         <Chats/>    {/*CHATS*/}
-         
-      </div> 
- )
+   return (
+      <div className="sidebar">
+         <Navbar />   {/*CHATS Wording */}
+         <Search />   {/*Search bar for chats*/}
+         <Chats />    {/*CHATS*/}
+
+      </div>
+   )
 }
 
 export default Sidebar;

@@ -1,4 +1,4 @@
-import React, { useState , useContext, useEffect} from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
 import Chat from '../components/Chat';
 import Posts from './Posts';
@@ -7,13 +7,13 @@ import Bio from './PostPages/Bio';
 import Navbar from '../components/Navbar';
 import { auth } from '../firebase';
 import { AuthContext } from '../context/AuthContext';
-import { getUserDataFromFirestore } from '../firebase'; 
+import { getUserDataFromFirestore } from '../firebase';
 
 export const Home = () => {
   const [showPosts, setShowPosts] = useState(true);
   const [isPostsPage, setIsPostsPage] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
-  const [showBio,setShowBio] = useState(false);
+  const [showBio, setShowBio] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
 
   const handleShowPosts = () => {
@@ -27,15 +27,15 @@ export const Home = () => {
     setSelectedPost(null);
     setShowCreate(!showCreate);
     setShowBio(false);
-    //setShowPosts(!showPosts);
-   
   };
+
   const handleShowBio = () => {
     setShowBio(true);
     setShowCreate(false);
     setShowPosts(false);
     setIsPostsPage(false);
   }
+
   const handlePostSuccess = () => {
     setShowPosts(true);
     setIsPostsPage(true);
@@ -43,6 +43,7 @@ export const Home = () => {
     setShowBio(false);
     setSelectedPost(null);
   };
+
   const handleEditPost = (post) => {
     setSelectedPost(post);
     setShowCreate(true);
@@ -64,7 +65,7 @@ export const Home = () => {
 
   const { currentUser } = useContext(AuthContext);
   const [userDisplayName, setUserDisplayName] = useState('');
-  useEffect (() => {
+  useEffect(() => {
     const fetchUserData = async () => {
       if (currentUser && currentUser.uid) {
         const userData = await getUserDataFromFirestore(currentUser.uid);
@@ -84,26 +85,24 @@ export const Home = () => {
   return (
     <div className="home">
       <div className="top-navigation-bar">
+
         <div className='left-top-navigation-bar'>
-           {/* <img className="collab-logo" src="src/images/ColLAB.png"></img>  */}
-            <img className="collab-logo" src="/ColLAB.png"></img>
-           
-          <div className='greeting-text'>Hello, {userDisplayName}!</div>      
+          <img className="collab-logo" src="/ColLAB.png"></img>
+          <div className='greeting-text'>Hello, {userDisplayName}!</div>
         </div>
-        
+
         <div className="center-top-navigation-bar">
-
-         <button className= "navigation-bar-button" onClick={handleShowPosts}>
-          {isPostsPage ? 'Chats' : 'Home'}
-        </button>
-  
-        {isPostsPage && (
-          <button className= "navigation-bar-button" onClick={handleCreatePost}>
-            {showCreate ? 'Home' : 'Create Post'}
+          <button className="navigation-bar-button" onClick={handleShowPosts}>
+            {isPostsPage ? 'Chats' : 'Home'}
           </button>
-        )}
 
-        {isPostsPage && !showCreate && (
+          {isPostsPage && (
+            <button className="navigation-bar-button" onClick={handleCreatePost}>
+              {showCreate ? 'Home' : 'Create Post'}
+            </button>
+          )}
+
+          {isPostsPage && !showCreate && (
             <button className="navigation-bar-button" onClick={handleShowBio}>
               Profile
             </button>
@@ -111,25 +110,25 @@ export const Home = () => {
 
         </div>
 
-          <button className='logout-button' onClick={handleSignOut}>Logout</button>
-        
+        <button className='logout-button' onClick={handleSignOut}>Logout</button>
+
       </div>
-    
-      
+
+
       <div className="chatpage-container">
         {!showPosts && !showCreate && !showBio && <Sidebar />}
         {!showPosts && !showCreate && !showBio && <Chat />}
         {showPosts ? (
           showCreate ? (
-            <CreatePost onPostSuccess={handlePostSuccess}  selectedPost={selectedPost} />
+            <CreatePost onPostSuccess={handlePostSuccess} selectedPost={selectedPost} />
           ) : (
-            <Posts isAuth={true} handleShowPosts={handleShowPosts}  handleEditPost={handleEditPost} />
+            <Posts isAuth={true} handleShowPosts={handleShowPosts} handleEditPost={handleEditPost} />
           )
-        ) : null }
+        ) : null}
         {showBio && <Bio />} {/* Display the Bio page when showBio state is true */}
 
       </div>
     </div>
   );
-  
+
 };
